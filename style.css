@@ -160,7 +160,7 @@ div.status-publish h2 a:active { color:#393C37; text-decoration:none }
 	padding-bottom: 0em;
 	border-top: solid 2px black;
 
-	color: white;
+	color: black;
 	background-color: #FFFFFF;
 }
 
@@ -173,9 +173,12 @@ div.status-publish h2 a:active { color:#393C37; text-decoration:none }
 }
 
 .post > h4 {
-	border-bottom: 1px solid #BABABA;
+	border-bottom: 1px dotted #BABABA;
 }
 
+.post > h5 {
+	border-bottom: 1px dotted #BABABA;
+}
 
 .more-link {
 	display: block;
