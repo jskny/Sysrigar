@@ -164,6 +164,33 @@ div.status-publish h2 a:active { color:#393C37; text-decoration:none }
 }
 
 
+.post > h2 {
+}
+
+.post > h3 {
+	border-bottom: 1px solid #BABABA;
+}
+
+.post > h4 {
+	border-bottom: 1px dotted #BABABA;
+}
+
+.post > h5 {
+	border-bottom: 1px dotted #BABABA;
+}
+
+.more-link {
+	display: block;
+
+	text-decoration: none;
+	text-align: center;
+
+	border: 1px solid #BABABA;
+	color: #505050;
+	background: #FBFAF4;
+}
+
+
 .navigation {
 	margin-top: 0.5em;
 	padding-top: 0.5em;
@@ -172,9 +199,19 @@ div.status-publish h2 a:active { color:#393C37; text-decoration:none }
 	overflow: auto;
 	border-top: solid 1px black;
 }
-.navigation a {
+
+
+.navigation a,
+.navigation a:hover,
+.navigation a:visited {
+	display: block;
+
 	text-decoration: none;
-	border: solid 1px #888888;
+	text-align: center;
+
+	border: 1px solid #BABABA;
+
+	color: #505050;
 	background: white;
 }
 .navigation a:link { color:#393C37; text-decoration:none }
