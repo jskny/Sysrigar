@@ -111,4 +111,35 @@ $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="di
 }
 
 
+// ウクライナ等からのログインページへの攻撃が続いているので、先人様を参考にしてセキュリティ対策を施す。
+// wordpress フォルダ直下に admin-page-access.php を置き、そこ経由でのみアクセスを認める。
+// 2017/12/24
+// https://gray-code.com/blog/wordpress/change-the-url-of-admin-page/
+define('LOGIN_PAGE', 'admin-page-access.php');
+add_action('login_init', 'admin_login_init');
+function admin_login_init()
+{
+	if(!defined('SYSRIGAR_LOGIN_KEY') || password_verify(SYSRIGAR_LOGIN_KEY_TEXT, SYSRIGAR_LOGIN_KEY) === false) {
+		header('Location:' . site_url() . '/404.php');
+		exit;
+	}
+}
+
+add_filter('site_url', 'admin_login_site_url', 10, 4);
+function admin_login_site_url( $url, $path, $orig_scheme, $blog_id)
+{
+	if(($path == 'wp-login.php' || preg_match( '/wp-login\.php\?action=\w+/', $path) ) && (is_user_logged_in() || strpos( $_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false)) {
+		$url = str_replace( 'wp-login.php', LOGIN_PAGE, $url);
+	}
+	return $url;
+}
+add_filter('wp_redirect', 'admin_login_wp_redirect', 10, 2);
+function admin_login_wp_redirect( $location, $status) {
+	if(is_user_logged_in() && strpos( $_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false) {
+		$location = str_replace( 'wp-login.php', LOGIN_PAGE, $location);
+	}
+	return $location;
+}
+
+
 ?>
