@@ -2,10 +2,10 @@
 /*
 	Theme Name: Sysrigar
 	Description: Sysrigar 用の WordPress テーマです。
-	Theme URI:
-	Author: Sysrigar
+	Theme URI: https://sysrigar.com/
+	Author: jskny
 	Author URI: https://sysrigar.com/
-	Version: 0.05
+	Version: 0.06
 	License:
 	License URI:
 	Tags: simple
@@ -401,7 +401,21 @@ pre {
 	line-height: 17px;
 }
 
+
+img {
+	margin: 0;
+	padding: 0;
+
+	-ms-interpolation-mode: bicubic;
+	border: 0;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+
 img.aligncenter {
+	clear: both;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
@@ -412,6 +426,7 @@ img.aligncenter {
 }
 
 img.alignright {
+	clear: both;
 	display: inline-block;
 	margin: 0 0 1em 1.5em;
 
@@ -421,6 +436,7 @@ img.alignright {
 }
 
 img.alignleft {
+	clear: both;
 	display: inline-block;
 	margin: 0 1.5em 1em 0;
 
