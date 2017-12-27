@@ -77,6 +77,7 @@ body {
 	padding: 0;
 }
 #footer {
+	padding: 1em;
 	text-align: center;
 	margin:0;
 }
@@ -138,6 +139,7 @@ ul, ol {
 
 .post strong {
 	background: linear-gradient(transparent 60%, #66ffb8 60%);
+	text-shadow: 1px 1px 0 silver;
 }
 
 
