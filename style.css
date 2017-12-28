@@ -24,7 +24,6 @@ body {
 
 	font-family: "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "MS UI Gothic", sans-serif;
 	font-size: 16px;
-	line-height: 1.6;
 	word-wrap: break-word;
 	-webkit-text-size-adjust: 100%;
 
@@ -34,17 +33,23 @@ body {
 
 #header {
 	position: relative;
+
+	background-color: #FFFFFF;
+	box-shadow: 1px 1px 1px 1px silver;
 }
 #header h1 {
-	text-align: center;
+	text-align: left;
 }
 #header p {
-	text-align: center;
+	padding-left: 50px;
 }
 #logo {
-	font-size: 36px;
+	font-size: 42px;
+	margin-top: 0.5em;
 	margin-bottom: 0px;
-	text-align: left;
+	padding-left: 50px;
+	padding-top: 50px;
+
 	text-shadow: 1px 1px 0 silver;
 }
 #logo a {
@@ -111,7 +116,10 @@ ul, ol {
 	margin: 0em;
 	font-size: 16px;
 }
-.menu a { text-decoration: none; }
+.menu a {
+	display: block; /* text 以外をクリックしても動作するように */
+	text-decoration: none;
+}
 .menu a:link { color:#393C37; text-decoration:none }
 .menu a:visited { color:#393C37; text-decoration:none }
 .menu a:hover { color:#393C37; text-decoration:none }
@@ -320,6 +328,16 @@ pre {
 @media only screen and (max-width: 760px) {
 	#container {
 		width: 100%;
+	}
+	#header h1 {
+		font-size: 36px;
+		text-align: center;
+		padding-top: 0.5em;
+		padding-left: 0px;
+	}
+	#header p {
+		text-align: center;
+		padding-left: 0px;
 	}
 	#main {
 		float: none;
