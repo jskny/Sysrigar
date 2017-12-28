@@ -55,7 +55,7 @@ window.onload = function() {
 <body <?php body_class(); ?>>
 	<div id="container">
 		<!-- header -->
-		<div id="header" class="clearfix">
+		<div id="header" class="clearfix" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/header-bg.png'); background-repeat: no-repeat; background-position: center; background-size:auto 90%;">
 			<h1 id="logo"><a href="<?php echo home_url('/'); ?>"><span><?php bloginfo("name"); ?></span></a></h1>
 			<p><span id="description"><?php bloginfo("description"); ?></span>　</p>
 			<?php wp_nav_menu( array(

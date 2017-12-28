@@ -41,14 +41,15 @@ body {
 	text-align: left;
 }
 #header p {
-	padding-left: 50px;
+	padding-left: 45px;
+	padding-bottom: 0.5em;
 }
 #logo {
 	font-size: 42px;
 	margin-top: 0.5em;
 	margin-bottom: 0px;
-	padding-left: 50px;
-	padding-top: 50px;
+	padding-left: 45px;
+	padding-top: 40px;
 
 	text-shadow: 1px 1px 0 silver;
 }
@@ -332,12 +333,13 @@ pre {
 	#header h1 {
 		font-size: 36px;
 		text-align: center;
-		padding-top: 0.5em;
+		padding-top: 0.7em;
 		padding-left: 0px;
 	}
 	#header p {
 		text-align: center;
 		padding-left: 0px;
+		padding-bottom: 0px;
 	}
 	#main {
 		float: none;
