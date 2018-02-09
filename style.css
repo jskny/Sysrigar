@@ -181,7 +181,7 @@ div.status-publish h2 a:active { color:#393C37; text-decoration:none }
 	border-top: solid 2px black;
 
 	background-color: #FFFFFF;
-	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);     
 }
 
 
@@ -283,9 +283,29 @@ div.status-publish h2 a:active { color:#393C37; text-decoration:none }
 }
 
 
-#searchform {
+/* https://qiita.com/motsu/items/56ee9e93a8d4d6a7ed9f */
+#search-form {
+	background-color: white;
+	width: 270px;
+	height: 20px;
+	border: 1px silver solid;
 }
-
+#search-form input {
+	vertical-align: top;
+	margin: 0px;
+	height: 100%;
+	box-sizing: border-box;
+	background-color: transparent;
+}
+#search-text {
+	width: 220px;
+	border: none;
+	border-right: 1px green solid;
+}
+#search-submit {
+	width: 50px;
+	border: none;
+}
 
 .clearfix:after{
 	content: "";
