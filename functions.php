@@ -1,31 +1,34 @@
 <?php
-// メインカラムの幅を指定する変数。下記は 600px を指定（記述推奨）
-if ( ! isset( $content_width ) ) $content_width = 600;
+// メインカラムの幅を指定する変数。
+if (!isset($content_width)) {
+	$content_width = 980;
+}
+
 
 // <head>内に RSSフィードのリンクを表示するコード
-add_theme_support( 'automatic-feed-links' );
+add_theme_support('automatic-feed-links');
 
 // ダイナミックサイドバーを定義するコード（CHAPTER 11）
-register_sidebar( array(
-	'name'			=> 'サイドバーウィジット-1',
-	'id'			=> 'sidebar-1',
+register_sidebar(array(
+	'name'		=> 'サイドバーウィジット-1',
+	'id'		=> 'sidebar-1',
 	'description'	=> 'サイドバーのウィジットエリアです。デフォルトのサイドバーと丸ごと入れ替えたいときに使ってください。',
 	'before_widget'	=> '<div id="%1$s" class="widget %2$s">',
 	'after_widget'	=> '</div>',
-) );
+));
 
 
 // カスタムメニュー機能を有効にするコード（CHAPTER 12）
-add_theme_support( 'menus' );
+add_theme_support('menus');
 // メニューの「ホーム」という表記を Home に変更
-function sysrigar_page_menu_args( $args ) {
+function sysrigar_page_menu_args($args) {
 	$args['show_home'] = 'Home';
 	return $args;
 }
 add_filter('wp_page_menu_args', 'sysrigar_page_menu_args');
 
 // カスタムメニューの「場所」を設定するコード
-register_nav_menu( 'primary', 'ヘッダーのナビゲーション' );
+register_nav_menu('primary', 'ヘッダーのナビゲーション');
 
 
 // 不必要な meta 情報を排除
@@ -36,7 +39,7 @@ remove_action('wp_head', 'rsd_link');
 // wlwmanifestを非表示にする
 remove_action('wp_head', 'wlwmanifest_link');
 // http://wpcj.net/1977
-foreach ( array( 'rss2_head', 'commentsrss2_head', 'rss_head', 'rdf_header', 'atom_head', 'comments_atom_head', 'opml_head', 'app_head' ) as $action ) {
+foreach (array('rss2_head', 'commentsrss2_head', 'rss_head', 'rdf_header', 'atom_head', 'comments_atom_head', 'opml_head', 'app_head') as $action) {
 	remove_action( $action, 'the_generator' );
 }
 // http://on-ze.com/archives/5127
@@ -47,21 +50,21 @@ remove_action('wp_head','wp_oembed_add_host_js');
 
 // 絵文字スクリプトを削除
 function disable_emoji() {
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
-	remove_action( 'admin_print_styles', 'print_emoji_styles' );
-	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	remove_action('wp_head', 'print_emoji_detection_script', 7);
+	remove_action('admin_print_scripts', 'print_emoji_detection_script');
+	remove_action('wp_print_styles', 'print_emoji_styles');
+	remove_action('admin_print_styles', 'print_emoji_styles');
+	remove_filter('the_content_feed', 'wp_staticize_emoji');
+	remove_filter('comment_text_rss', 'wp_staticize_emoji');
+	remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
 }
-add_action( 'init', 'disable_emoji' );
+add_action('init', 'disable_emoji');
 
 
 // dnsプリフェッチのコードを除去
-add_filter( 'wp_resource_hints', 'remove_dns_prefetch', 10, 2 );
-function remove_dns_prefetch( $hints, $relation_type ) {
-	if ( 'dns-prefetch' === $relation_type ) {
+add_filter('wp_resource_hints', 'remove_dns_prefetch', 10, 2);
+function remove_dns_prefetch($hints, $relation_type) {
+	if ('dns-prefetch' === $relation_type) {
 		return array_diff( wp_dependencies_unique_hosts(), $hints );
 	}
 	return $hints;
@@ -126,20 +129,29 @@ function admin_login_init()
 }
 
 add_filter('site_url', 'admin_login_site_url', 10, 4);
-function admin_login_site_url( $url, $path, $orig_scheme, $blog_id)
+function admin_login_site_url($url, $path, $orig_scheme, $blog_id)
 {
-	if(($path == 'wp-login.php' || preg_match( '/wp-login\.php\?action=\w+/', $path) ) && (is_user_logged_in() || strpos( $_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false)) {
-		$url = str_replace( 'wp-login.php', LOGIN_PAGE, $url);
+	if(($path == 'wp-login.php' || preg_match('/wp-login\.php\?action=\w+/', $path) ) && (is_user_logged_in() || strpos($_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false)) {
+		$url = str_replace('wp-login.php', LOGIN_PAGE, $url);
 	}
 	return $url;
 }
 add_filter('wp_redirect', 'admin_login_wp_redirect', 10, 2);
 function admin_login_wp_redirect( $location, $status) {
-	if(is_user_logged_in() && strpos( $_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false) {
-		$location = str_replace( 'wp-login.php', LOGIN_PAGE, $location);
+	if(is_user_logged_in() && strpos($_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false) {
+		$location = str_replace('wp-login.php', LOGIN_PAGE, $location);
 	}
 	return $location;
 }
+
+
+// 「続きを読む」リンクのクリック時にページをスクロールしない
+// https://wpdocs.osdn.jp/%E3%80%8C%E7%B6%9A%E3%81%8D%E3%82%92%E8%AA%AD%E3%82%80%E3%80%8D%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA
+function remove_more_link_scroll( $link ) {
+	$link = preg_replace( '|#more-[0-9]+|', '', $link );
+	return $link;
+}
+add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 
 
 ?>
