@@ -173,7 +173,7 @@ ul, ol {
 	& > h2 {
 		text-shadow: 1px 1px 0 silver;
 	}
-	
+
 	& > h3 {
 		border-bottom: 1px solid #BABABA;
 		text-shadow: 1px 1px 0 silver;
@@ -226,7 +226,26 @@ div.status-publish {
 	border-top: solid 2px black;
 
 	background-color: #FFFFFF;
-	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);     
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
+
+	& > h2 {
+		text-shadow: 1px 1px 0 silver;
+	}
+	
+	& > h3 {
+		border-bottom: 1px solid #BABABA;
+		text-shadow: 1px 1px 0 silver;
+	}
+
+	& > h4 {
+		border-bottom: 1px dotted #BABABA;
+		text-shadow: 1px 1px 0 silver;
+	}
+	
+	& > h5 {
+		border-bottom: 1px dotted #BABABA;
+		text-shadow: 1px 1px 0 silver;
+	}
 }
 
 
