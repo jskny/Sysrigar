@@ -24,6 +24,44 @@ $colorBodyBackground : #F4F5F7;
 $colorMenuBorder : #C0CBE9;
 
 
+// 下線を消したAタグ
+@mixin DefNonTextDecorationLink($color:#393C37) {
+	& a {
+		text-decoration: none;
+
+		&:link { color: $color; }
+		&:visited { color: $color; }
+		&:hover { color: $color; }
+		&:active { color: $color; }
+
+		@content;
+	}
+}
+
+
+// 基本的なテキスト装飾
+@mixin DefTextDecoration() {
+	& > h2 {
+		text-shadow: 1px 1px 0 silver;
+	}
+
+	& > h3 {
+		border-bottom: 1px solid #BABABA;
+		text-shadow: 1px 1px 0 silver;
+	}
+
+	& > h4 {
+		border-bottom: 1px dotted #BABABA;
+		text-shadow: 1px 1px 0 silver;
+	}
+
+	& > h5 {
+		border-bottom: 1px dotted #BABABA;
+		text-shadow: 1px 1px 0 silver;
+	}
+}
+
+
 html {
 	height: 100%;
 }
@@ -67,14 +105,7 @@ body {
 
 	text-shadow: 1px 1px 0 silver;
 
-	& a {
-		text-decoration: none;
-
-		&:link { color:#393C37; }
-		&:visited { color:#393C37; }
-		&:hover { color:#393C37; }
-		&:active { color:#393C37; }
-	}
+	@include DefNonTextDecorationLink();
 }
 
 
@@ -136,14 +167,8 @@ ul, ol {
 		font-size: 16px;
 	}
 
-	& a {
-		display: block; /* text 以外をクリックしても動作するように */
-		text-decoration: none;
-
-		&:link { color:#393C37; }
-		&:visited { color:#393C37; }
-		&:hover { color:#393C37; }
-		&:active { color:#393C37; }
+	@include DefNonTextDecorationLink() {
+		display: block;
 	}
 
 	& .current_page_item {
@@ -152,6 +177,7 @@ ul, ol {
 		background-color: #DDFFDD;
 	}
 }
+
 
 .post {
 	margin-top: 1em;
@@ -170,24 +196,7 @@ ul, ol {
 		text-shadow: 1px 1px 0 $colorBoxShadowMain;
 	}
 
-	& > h2 {
-		text-shadow: 1px 1px 0 silver;
-	}
-
-	& > h3 {
-		border-bottom: 1px solid #BABABA;
-		text-shadow: 1px 1px 0 silver;
-	}
-	
-	& > h4 {
-		border-bottom: 1px dotted #BABABA;
-		text-shadow: 1px 1px 0 silver;
-	}
-	
-	& > h5 {
-		border-bottom: 1px dotted #BABABA;
-		text-shadow: 1px 1px 0 silver;
-	}	
+	@include DefTextDecoration();
 }
 
 .post-meta {
@@ -205,14 +214,7 @@ ul, ol {
 
 div.status-publish {
 	& h2 {
-		& a {
-			text-decoration: none;
-
-			&:link { color:#393C37; }
-			&:visited { color:#393C37; }
-			&:hover { color:#393C37; }
-			&:active { color:#393C37; }
-		}
+		@include DefNonTextDecorationLink();
 	}
 }
 
@@ -228,24 +230,7 @@ div.status-publish {
 	background-color: #FFFFFF;
 	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
 
-	& > h2 {
-		text-shadow: 1px 1px 0 silver;
-	}
-	
-	& > h3 {
-		border-bottom: 1px solid #BABABA;
-		text-shadow: 1px 1px 0 silver;
-	}
-
-	& > h4 {
-		border-bottom: 1px dotted #BABABA;
-		text-shadow: 1px 1px 0 silver;
-	}
-	
-	& > h5 {
-		border-bottom: 1px dotted #BABABA;
-		text-shadow: 1px 1px 0 silver;
-	}
+	@include DefTextDecoration();
 }
 
 
@@ -269,21 +254,14 @@ div.status-publish {
 	font-size: 1.2em;
 	overflow: auto;
 
-	& a {
+	@include DefNonTextDecorationLink() {
 		display: block;
-
-		text-decoration: none;
 		text-align: center;
 
 		border: 1px solid #BABABA;
 
 		color: #505050;
 		background: white;
-
-		&:link { color:#393C37; }
-		&:visited { color:#393C37; }
-		&:hover { color:#393C37; }
-		&:active { color:#393C37; }
 	}
 
 	& .alignleft {
