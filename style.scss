@@ -283,6 +283,22 @@ div.status-publish {
 }
 
 
+// 個々のコメント関連の処理
+.comments-list {
+	// li 要素の点を消し、横の空白を消す。
+	// https://oshiete.goo.ne.jp/qa/3493012.html
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+
+//	border: solid 2px black;
+
+	.comment {
+//		border: solid 2px yellow;
+	}
+}
+
+
 .widget ul li {
 	list-style-type: none!important;
 
