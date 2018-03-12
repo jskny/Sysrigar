@@ -13,6 +13,9 @@ register_sidebar(array(
 	'name'		=> 'サイドバーウィジット-1',
 	'id'		=> 'sidebar-1',
 	'description'	=> 'サイドバーのウィジットエリアです。デフォルトのサイドバーと丸ごと入れ替えたいときに使ってください。',
+
+	'before_title'	=> '<p class="title">',
+	'after_title'	=> '</p>',
 	'before_widget'	=> '<div id="%1$s" class="widget %2$s">',
 	'after_widget'	=> '</div>',
 ));

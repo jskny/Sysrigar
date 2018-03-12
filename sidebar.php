@@ -27,7 +27,7 @@
 			</ul>
 		</div>
 		<div class="widget">
-		    <h2>Meta</h2>
+			<h2>Meta</h2>
 			<ul>
 				<?php wp_register(); ?>
 				<li><?php wp_loginout(); ?></li>

@@ -242,9 +242,8 @@ div.status-publish h2 a {
     /*角の丸み*/
     box-shadow: 1px 1px 1px 1px silver;
     padding: 0.5em 0.5em 0.5em 0.5em; }
-
-.widgettitle {
-  text-shadow: 1px 1px 0 silver; }
+  .widget .title {
+    font-size: 24px; }
 
 /* https://qiita.com/motsu/items/56ee9e93a8d4d6a7ed9f */
 #search-form {
