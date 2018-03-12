@@ -227,6 +227,51 @@ div.status-publish h2 a {
   list-style: none;
   margin: 0px;
   padding: 0px; }
+  .comments-list .comment {
+    padding: 0.5em 0.5em;
+    background: #DDFFDD;
+    border: solid 1px #99FF99;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 1px silver; }
+    .comments-list .comment a {
+      text-decoration: none; }
+      .comments-list .comment a:link {
+        color: #393C37; }
+      .comments-list .comment a:visited {
+        color: #393C37; }
+      .comments-list .comment a:hover {
+        color: #393C37; }
+      .comments-list .comment a:active {
+        color: #393C37; }
+    .comments-list .comment p {
+      margin: 0px;
+      font-size: 14px;
+      background: white; }
+  .comments-list .comment-author {
+    display: inline-block;
+    padding: 0.5em 0.5em;
+    background: #88EE88;
+    font-size: 14px; }
+  .comments-list .comment-meta {
+    display: inline-block;
+    font-size: 12px; }
+  .comments-list .reply {
+    display: inline-block;
+    padding: 0.5em 0.5em;
+    background: #26af48;
+    /*ボタン色*/
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 1px silver; }
+    .comments-list .reply a {
+      text-decoration: none; }
+      .comments-list .reply a:link {
+        color: white; }
+      .comments-list .reply a:visited {
+        color: white; }
+      .comments-list .reply a:hover {
+        color: white; }
+      .comments-list .reply a:active {
+        color: white; }
 
 .widget {
   margin-top: 1em;

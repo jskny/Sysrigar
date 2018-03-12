@@ -283,6 +283,8 @@ div.status-publish {
 }
 
 
+$colorCommentBackground : #DDFFDD;
+
 // 個々のコメント関連の処理
 .comments-list {
 	// li 要素の点を消し、横の空白を消す。
@@ -293,8 +295,44 @@ div.status-publish {
 
 //	border: solid 2px black;
 
-	.comment {
-//		border: solid 2px yellow;
+	& .comment {
+		padding: 0.5em 0.5em;
+		background: $colorCommentBackground;
+		border: solid 1px #99FF99;
+		border-radius: 2px;
+		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+
+		@include DefNonTextDecorationLink();
+
+		& p {
+			margin: 0px;
+			font-size: 14px;
+			background: white;
+		}
+	}
+
+	& .comment-author {
+		display: inline-block;
+		padding: 0.5em 0.5em;
+		background: #88EE88;
+	
+		font-size: 14px;
+	}
+
+	& .comment-meta {
+		display: inline-block;
+	
+		font-size: 12px;
+	}
+	
+	& .reply {
+		@include DefNonTextDecorationLink(white);
+
+		display: inline-block;
+		padding: 0.5em 0.5em;
+		background: #26af48;/*ボタン色*/
+		border-radius: 2px;
+		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
 	}
 }
 
@@ -308,7 +346,7 @@ div.status-publish {
 	background-color: #FFFFFF;
 	box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
 
-	ul > li {
+	& ul > li {
 		list-style-type: none!important;
 
 		background: #fffdf7;
@@ -317,7 +355,7 @@ div.status-publish {
 		padding: 0.5em 0.5em 0.5em 0.5em;
 	}
 
-	.title {
+	& .title {
 		font-size: 24px;
 	}
 }
