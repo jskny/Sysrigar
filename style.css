@@ -228,14 +228,6 @@ div.status-publish h2 a {
   margin: 0px;
   padding: 0px; }
 
-.widget ul li {
-  list-style-type: none !important;
-  background: #fffdf7;
-  border-radius: 4px;
-  /*角の丸み*/
-  box-shadow: 1px 1px 1px 1px silver;
-  padding: 0.5em 0.5em 0.5em 0.5em; }
-
 .widget {
   margin-top: 1em;
   position: relative;
@@ -243,6 +235,13 @@ div.status-publish h2 a {
   border-top: solid 2px black;
   background-color: #FFFFFF;
   box-shadow: 1px 1px 1px 1px silver; }
+  .widget ul > li {
+    list-style-type: none !important;
+    background: #fffdf7;
+    border-radius: 4px;
+    /*角の丸み*/
+    box-shadow: 1px 1px 1px 1px silver;
+    padding: 0.5em 0.5em 0.5em 0.5em; }
 
 .widgettitle {
   text-shadow: 1px 1px 0 silver; }
