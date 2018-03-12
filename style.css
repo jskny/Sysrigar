@@ -260,7 +260,6 @@ div.status-publish h2 a {
     padding: 0.5em 0.5em;
     background: #26af48;
     /*ボタン色*/
-    border-radius: 2px;
     box-shadow: 1px 1px 1px 1px silver; }
     .comments-list .reply a {
       text-decoration: none; }
@@ -272,6 +271,62 @@ div.status-publish h2 a {
         color: white; }
       .comments-list .reply a:active {
         color: white; }
+
+.comment-respond {
+  margin: 0px;
+  padding: 0.5em 0.5em;
+  border: solid 1px #66ffb8;
+  background: white;
+  text-align: left; }
+  .comment-respond a {
+    text-decoration: none;
+    background: #66ffb8;
+    /*ボタン色*/
+    box-shadow: 1px 1px 1px 1px silver; }
+    .comment-respond a:link {
+      color: white; }
+    .comment-respond a:visited {
+      color: white; }
+    .comment-respond a:hover {
+      color: white; }
+    .comment-respond a:active {
+      color: white; }
+  .comment-respond .comment-form {
+    margin: 0.1rem; }
+    .comment-respond .comment-form .comment-reply-title {
+      margin: 0px; }
+    .comment-respond .comment-form .comment-notes {
+      margin: 0px;
+      font-size: small; }
+    .comment-respond .comment-form textarea {
+      display: block;
+      padding: 0.2rem 0.2rem;
+      -webkit-box-sizing: border-box;
+      -khtml-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100px; }
+    .comment-respond .comment-form input {
+      display: block;
+      padding: 0.2rem 0.2rem;
+      -webkit-box-sizing: border-box;
+      -khtml-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      height: auto; }
+    .comment-respond .comment-form .form-submit {
+      margin-top: 1rem; }
+      .comment-respond .comment-form .form-submit .submit {
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        background-color: #26af48;
+        color: white;
+        border-style: none;
+        box-shadow: 1px 1px 1px 1px silver; }
 
 .widget {
   margin-top: 1em;

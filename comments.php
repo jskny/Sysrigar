@@ -17,9 +17,6 @@
 		'label_submit'	=> '送信',
 		// "Text or HTML to be displayed after the set of comment fields" を削除
 		'comment_notes_after' => '',
-		// オリジナルの textarea (コメント本文入力欄) を再定義
-		'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" style="width:95%;height:80px;margin:5px;" aria-required="true"></textarea></p>',
-
 	);
 	comment_form( $args );
 	?>

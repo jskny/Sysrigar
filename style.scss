@@ -293,8 +293,6 @@ $colorCommentBackground : #DDFFDD;
 	margin: 0px;
 	padding: 0px;
 
-//	border: solid 2px black;
-
 	& .comment {
 		padding: 0.5em 0.5em;
 		background: $colorCommentBackground;
@@ -324,15 +322,88 @@ $colorCommentBackground : #DDFFDD;
 	
 		font-size: 12px;
 	}
-	
+
 	& .reply {
 		@include DefNonTextDecorationLink(white);
 
 		display: inline-block;
 		padding: 0.5em 0.5em;
 		background: #26af48;/*ボタン色*/
-		border-radius: 2px;
 		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+	}
+}
+
+.comment-respond {
+	margin: 0px;
+	padding: 0.5em 0.5em;
+	border: solid 1px #66ffb8;
+	background: white;
+
+	text-align: left;
+
+
+	@include DefNonTextDecorationLink(white) {
+		background: #66ffb8;/*ボタン色*/
+		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+	}
+
+	& .comment-form {
+		margin: 0.1rem;
+
+		& .comment-reply-title {
+			margin: 0px;
+		}
+
+		& .comment-notes {
+			margin: 0px;
+			font-size: small;
+		}
+
+		& textarea {
+			display: block;
+			padding: 0.2rem 0.2rem;
+
+			-webkit-box-sizing: border-box;
+			-khtml-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+			width: 100%;
+			height: 100px;
+		}
+
+		// input要素を親要素に合わせる
+		// http://geta6.logdown.com/posts/142635-input
+		& input {
+			display: block;
+			padding: 0.2rem 0.2rem;
+			-webkit-box-sizing: border-box;
+			-khtml-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+			width: 100%;
+			height: auto;
+		}
+
+		& .form-submit {
+			margin-top: 1rem;
+
+			// 送信ボタンの装飾
+			// http://monopocket.jp/blog/css/1113/
+			& .submit {
+				padding: 15px 20px;
+				font-size: 1.2rem;
+				// 背景色を黒に指定
+				background-color: #26af48;
+				// 文字色を白に指定
+				color: white;
+				// submitボタンのを枠を非表示にする
+				border-style: none;
+
+				box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+			}
+		}
 	}
 }
 
