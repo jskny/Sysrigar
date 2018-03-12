@@ -41,21 +41,21 @@ $colorMenuBorder : #C0CBE9;
 
 // 基本的なテキスト装飾
 @mixin DefTextDecoration() {
-	& > h2 {
+	& h2 {
 		text-shadow: 1px 1px 0 silver;
 	}
 
-	& > h3 {
+	& h3 {
 		border-bottom: 1px solid #BABABA;
 		text-shadow: 1px 1px 0 silver;
 	}
 
-	& > h4 {
+	& h4 {
 		border-bottom: 1px dotted #BABABA;
 		text-shadow: 1px 1px 0 silver;
 	}
 
-	& > h5 {
+	& h5 {
 		border-bottom: 1px dotted #BABABA;
 		text-shadow: 1px 1px 0 silver;
 	}
