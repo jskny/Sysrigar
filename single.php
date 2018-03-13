@@ -19,9 +19,9 @@
 				);
 				wp_link_pages( $args ); ?>
 				<div class="sns-buttons">
-					<a class="twitter" href="http://twitter.com/share?url=<?php echo the_permalink(); ?>" target="_blank">Tweet</a>
+					<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo the_permalink(); ?>&text=<?php echo urlencode(get_the_title()); ?>&via=jskny_tw&hashtags=sysrigar" target="_blank">Tweet</a>
 					<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink(); ?>" target="_blank">Facebook</a>
-					<a class="line" href="http://line.me/R/msg/text/?<?php echo the_permalink(); ?>" target="_blank">LINE</a>
+					<a class="line" href="https://line.me/R/msg/text/?<?php echo urlencode(get_the_title()); ?>%0D%0A<?php the_permalink(); ?>" target="_blank">LINE</a>
 				</div>
 				<p class="footer-post-meta">
 					<?php the_tags( 'Tag : ', ', ' ); ?>
