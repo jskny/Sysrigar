@@ -18,6 +18,11 @@
 					'link_after'	=> '</span>',
 				);
 				wp_link_pages( $args ); ?>
+				<div class="sns-buttons">
+					<a class="twitter" href="http://twitter.com/share?url=<?php echo the_permalink(); ?>" target="_blank">Tweet</a>
+					<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink(); ?>" target="_blank">Facebook</a>
+					<a class="line" href="http://line.me/R/msg/text/?<?php echo the_permalink(); ?>" target="_blank">LINE</a>
+				</div>
 				<p class="footer-post-meta">
 					<?php the_tags( 'Tag : ', ', ' ); ?>
 					<span class="post-author">作成者 : <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>

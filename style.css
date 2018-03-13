@@ -5,7 +5,7 @@
 	Theme URI: https://sysrigar.com/
 	Author: jskny
 	Author URI: https://sysrigar.com/
-	Version: 0.07
+	Version: 0.08
 	License:
 	License URI:
 	Tags: simple
@@ -125,6 +125,34 @@ ul, ol {
   .post strong {
     background: linear-gradient(transparent 60%, #66ffb8 60%);
     text-shadow: 1px 1px 0 silver; }
+  .post .sns-buttons {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: left; }
+    .post .sns-buttons a {
+      text-decoration: none; }
+      .post .sns-buttons a:link {
+        color: white; }
+      .post .sns-buttons a:visited {
+        color: white; }
+      .post .sns-buttons a:hover {
+        color: white; }
+      .post .sns-buttons a:active {
+        color: white; }
+    .post .sns-buttons .twitter {
+      padding: 0.4rem;
+      background: #1da1f3;
+      box-shadow: 1px 1px 1px 1px silver; }
+    .post .sns-buttons .facebook {
+      padding: 0.4rem;
+      background: #3b75d4;
+      box-shadow: 1px 1px 1px 1px silver; }
+    .post .sns-buttons .line {
+      padding: 0.4rem;
+      background: #1dcd00;
+      box-shadow: 1px 1px 1px 1px silver; }
   .post h2 {
     text-shadow: 1px 1px 0 silver; }
   .post h3 {

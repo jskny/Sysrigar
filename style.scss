@@ -179,6 +179,12 @@ ul, ol {
 }
 
 
+@mixin styleSnsBtns($color:red) {
+	padding: 0.4rem;
+	background: $color;
+	box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+}
+
 .post {
 	margin-top: 1em;
 	padding-top: 0.5em;
@@ -194,6 +200,29 @@ ul, ol {
 	& strong {
 		background: linear-gradient(transparent 60%, #66ffb8 60%);
 		text-shadow: 1px 1px 0 $colorBoxShadowMain;
+	}
+
+	& .sns-buttons {
+		@include DefNonTextDecorationLink(white);
+
+		display: block;
+		height: 40px;
+		line-height: 40px;
+
+		font-size: 20px;
+		text-align: left;
+
+		& .twitter {
+			@include styleSnsBtns(#1da1f3);
+		}
+
+		& .facebook {
+			@include styleSnsBtns(#3b75d4);
+		}
+
+		& .line {
+			@include styleSnsBtns(#1dcd00);
+		}
 	}
 
 	@include DefTextDecoration();
