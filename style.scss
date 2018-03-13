@@ -629,7 +629,7 @@ pre {
 		height: auto;
 		max-width: 100%;
 		vertical-align: middle;
-	}	
+	}
 }
 
 .wp-caption-text,
@@ -655,35 +655,37 @@ img {
 	height: auto;
 	max-width: 100%;
 	vertical-align: middle;
+}
 
-	.aligncenter {
-		clear: both;
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 
-	.alignright {
-		clear: both;
-		display: inline-block;
-		margin: 0 0 1em 1.5em;
+	text-align: center;
+}
 
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
+.alignright {
+	clear: both;
+	display: inline-block;
+	margin: 0 0 1em 1.5em;
 
-	.alignleft {
-		clear: both;
-		display: inline-block;
-		margin: 0 1.5em 1em 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
+.alignleft {
+	clear: both;
+	display: inline-block;
+	margin: 0 1.5em 1em 0;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
