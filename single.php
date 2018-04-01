@@ -19,7 +19,7 @@
 				);
 				wp_link_pages( $args ); ?>
 				<div class="sns-buttons">
-					<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo the_permalink(); ?>&text=<?php echo urlencode(get_the_title()); ?>&via=jskny_tw&hashtags=sysrigar" target="_blank">Tweet</a>
+					<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(mb_convert_encoding(the_permalink(), 'UTF-8', 'auto')); ?>&text=<?php echo urlencode(mb_convert_encoding(get_the_title(), 'UTF-8', 'auto')); ?>&via=jskny_tw&hashtags=sysrigar" target="_blank">Tweet</a>
 					<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink(); ?>" target="_blank">Facebook</a>
 					<a class="line" href="https://line.me/R/msg/text/?<?php echo urlencode(mb_convert_encoding(get_the_title(), 'UTF-8', 'auto')); ?>%0D%0A<?php the_permalink(); ?>" target="_blank">LINE</a>
 				</div>
