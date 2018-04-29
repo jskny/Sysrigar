@@ -8,7 +8,7 @@ if (!isset($content_width)) {
 // <head>内に RSSフィードのリンクを表示するコード
 add_theme_support('automatic-feed-links');
 
-// ダイナミックサイドバーを定義するコード（CHAPTER 11）
+// ダイナミックサイドバーを定義するコード
 register_sidebar(array(
 	'name'		=> 'サイドバーウィジット-1',
 	'id'		=> 'sidebar-1',
