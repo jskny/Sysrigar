@@ -69,6 +69,20 @@ body {
   width: 300px; }
   #sidebar ul {
     padding: 0; }
+  #sidebar .widget_archive label {
+    display: none; }
+  #sidebar .widget_archive select {
+    width: 260px;
+    height: 24px;
+    border: solid 1px #C0CBE9;
+    background-color: transparent;
+    color: #4d4d4d;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    cursor: pointer;
+    -webkit-appearance: none; }
 
 #footer {
   padding: 1em;

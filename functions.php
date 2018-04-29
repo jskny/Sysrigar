@@ -21,7 +21,7 @@ register_sidebar(array(
 ));
 
 
-// カスタムメニュー機能を有効にするコード（CHAPTER 12）
+// カスタムメニュー機能を有効にするコード
 add_theme_support('menus');
 // メニューの「ホーム」という表記を Home に変更
 function sysrigar_page_menu_args($args) {
