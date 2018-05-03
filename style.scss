@@ -124,6 +124,26 @@ body {
 	width: $widthMain;
 	padding: 0;
 }
+
+@mixin styleCorrespondingOptionalPullDownMenu() {
+	& label {
+		display: none;
+	}
+
+	& select {
+		width: 260px;
+		height: 24px;
+		border: solid 1px $colorMenuBorder;
+		background-color: transparent;
+		color: #4d4d4d;
+		text-transform: uppercase;
+		font-size: 18px;
+		margin:0;
+		padding: 0px 0px 0px 0px;
+		cursor:pointer;
+		-webkit-appearance: none;
+	}
+}
 #sidebar {
 	float: right;
 	width: $widthSidebar;
@@ -133,43 +153,11 @@ body {
 	}
 
 	& .widget_archive {
-		& label {
-			display: none;
-		}
-
-		& select {
-			width: 260px;
-			height: 24px;
-			border: solid 1px $colorMenuBorder;
-			background-color: transparent;
-			color: #4d4d4d;
-			text-transform: uppercase;
-			font-size: 18px;
-			margin:0;
-			padding: 0px 0px 0px 0px;
-			cursor:pointer;
-			-webkit-appearance: none;
-		}
+		@include styleCorrespondingOptionalPullDownMenu();
 	}
 
 	& .widget_categories {
-		& label {
-			display: none;
-		}
-
-		& select {
-			width: 260px;
-			height: 24px;
-			border: solid 1px $colorMenuBorder;
-			background-color: transparent;
-			color: #4d4d4d;
-			text-transform: uppercase;
-			font-size: 18px;
-			margin:0;
-			padding: 0px 0px 0px 0px;
-			cursor:pointer;
-			-webkit-appearance: none;
-		}
+		@include styleCorrespondingOptionalPullDownMenu();
 	}
 }
 #footer {
