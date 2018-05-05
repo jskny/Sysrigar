@@ -323,10 +323,14 @@ div.status-publish {
 		background: white;
 	}
 
-	& .alignleft {
+	& .prev {
+		float: left;
+		display: inline-block;
 		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;	
 	}
-	& .alignright {
+	& .next {
+		float: right;
+		display: inline-block;
 		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;	
 	}
 }

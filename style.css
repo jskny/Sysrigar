@@ -269,9 +269,13 @@ div.status-publish h2 a {
       color: #393C37; }
     .navigation a:active {
       color: #393C37; }
-  .navigation .alignleft {
+  .navigation .prev {
+    float: left;
+    display: inline-block;
     box-shadow: 1px 1px 1px 1px silver; }
-  .navigation .alignright {
+  .navigation .next {
+    float: right;
+    display: inline-block;
     box-shadow: 1px 1px 1px 1px silver; }
 
 #comment-area {
@@ -567,6 +571,7 @@ img {
 .alignright {
   clear: both;
   float: right;
+  display: inline-block;
   margin: 0 0 1em 1.5em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -575,6 +580,7 @@ img {
 .alignleft {
   clear: both;
   float: left;
+  display: inline-block;
   margin: 0 1.5em 1em 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

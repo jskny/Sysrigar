@@ -32,11 +32,11 @@
 			<div class="navigation"><!-- ページャー -->
 				<?php
 				if ( get_previous_post() ) : ?>
-					<div class="alignleft"><?php previous_post_link( '%link', '&laquo; %title' ); ?></div>
+					<div class="prev"><?php previous_post_link( '%link', '&laquo; %title' ); ?></div>
 				<?php endif;
 
 				if ( get_next_post() ) : ?>
-					<div class="alignright"><?php next_post_link( '%link', '%title &raquo;' ); ?></div>
+					<div class="next"><?php next_post_link( '%link', '%title &raquo;' ); ?></div>
 				<?php endif; ?>
 			</div>
 			<?php comments_template(); // コメント欄の表示
