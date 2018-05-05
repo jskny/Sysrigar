@@ -515,17 +515,6 @@ pre {
 
   .widget {
     margin-top: 1em; } }
-.aligncenter {
-  display: block;
-  margin-right: auto;
-  margin-left: auto; }
-
-.alignleft {
-  float: left; }
-
-.alignright {
-  float: right; }
-
 .wp-caption {
   margin: 10px;
   padding-top: 4px;
@@ -577,7 +566,7 @@ img {
 
 .alignright {
   clear: both;
-  display: inline-block;
+  float: right;
   margin: 0 0 1em 1.5em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -585,7 +574,7 @@ img {
 
 .alignleft {
   clear: both;
-  display: inline-block;
+  float: left;
   margin: 0 1.5em 1em 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

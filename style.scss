@@ -624,21 +624,6 @@ pre {
 }
 
 
-.aligncenter {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.alignleft {
-	float: left;
-}
-
-.alignright {
-	float: right;
-}
-
-
 .wp-caption {
 	margin: 10px;
 	padding-top: 4px;
@@ -687,6 +672,7 @@ img {
 	vertical-align: middle;
 }
 
+
 .aligncenter {
 	clear: both;
 	display: block;
@@ -702,6 +688,7 @@ img {
 
 .alignright {
 	clear: both;
+	float: right;
 	display: inline-block;
 	margin: 0 0 1em 1.5em;
 
@@ -712,6 +699,7 @@ img {
 
 .alignleft {
 	clear: both;
+	float: left;
 	display: inline-block;
 	margin: 0 1.5em 1em 0;
 
