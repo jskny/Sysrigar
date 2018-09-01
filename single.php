@@ -19,9 +19,27 @@
 				);
 				wp_link_pages( $args ); ?>
 				<div class="sns-buttons">
-					<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(mb_convert_encoding(the_permalink(), 'UTF-8', 'auto')); ?>&text=<?php echo urlencode(mb_convert_encoding(get_the_title(), 'UTF-8', 'auto')); ?>&via=jskny_tw&hashtags=sysrigar" target="_blank">Tweet</a>
-					<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink(); ?>" target="_blank">Facebook</a>
-					<a class="line" href="https://line.me/R/msg/text/?<?php echo urlencode(get_the_title()); ?>%0D%0A<?php the_permalink(); ?>" target="_blank">LINE</a>
+<?php
+// 日本語の文字列のみをURLエンコード
+// FROM : https://zakkiweb.net/a/25/
+function z_mb_urlencode( $str ) {
+	return preg_replace_callback(
+		'/[^\x21-\x7e]+/',
+		function( $matches ) {
+		return rawurlencode( $matches[0] );
+		},
+		$str);
+}
+
+$doubleEncodeUrl = get_permalink();
+$doubleEncodeUrl = z_mb_urlencode($doubleEncodeUrl);
+// Twitter の投稿画面でデコードされてしまうと、URLとして認識されないことがあるので、
+// % をエンコードされた状態である%25にし、Twitter上でデコードされた際に日本語URLとはならないようにしている。
+$doubleEncodeUrl = str_replace("%", "%25", $doubleEncodeUrl);
+?>
+					<a class="twitter" href="https://twitter.com/intent/tweet?url=<?= $doubleEncodeUrl; ?>&text=<?= rawurlencode(get_the_title()); ?>&via=jskny_tw&hashtags=sysrigar" target="_blank">Tweet</a>
+					<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?= $doubleEncodeUrl; ?>" target="_blank">Facebook</a>
+					<a class="line" href="https://line.me/R/msg/text/?<?= rawurlencode(get_the_title()); ?>%0D%0A<?= $doubleEncodeUrl; ?>" target="_blank">LINE</a>
 				</div>
 				<p class="footer-post-meta">
 					<?php the_tags( 'Tag : ', ', ' ); ?>
