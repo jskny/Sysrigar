@@ -29,19 +29,18 @@ body {
 #header {
   position: relative;
   background-color: #FFFFFF;
-  box-shadow: 1px 1px 1px 1px silver; }
+  border: 1px solid silver;
+  text-align: center; }
   #header h1 {
-    text-align: left; }
+    text-shadow: 2px 2px 0 silver; }
   #header p {
-    padding-left: 45px;
     padding-bottom: 0.5em; }
 
 #logo {
-  font-size: 42px;
-  margin-top: 0.5em;
+  font-size: 45px;
+  margin-top: 0.2em;
   margin-bottom: 0px;
-  padding-left: 45px;
-  padding-top: 40px;
+  padding-top: 0.7em;
   text-shadow: 1px 1px 0 silver; }
   #logo a {
     text-decoration: none; }
@@ -150,7 +149,7 @@ ul, ol {
   padding-bottom: 0.1em;
   border-top: solid 2px black;
   background-color: #FFFFFF;
-  box-shadow: 1px 1px 1px 1px silver;
+  border: 1px solid silver;
   /* 水色のカラーペン的なのを引く */ }
   .post strong {
     background: linear-gradient(transparent 60%, #66ffb8 60%);
@@ -174,15 +173,15 @@ ul, ol {
     .post .sns-buttons .twitter {
       padding: 0.4rem;
       background: #1da1f3;
-      box-shadow: 1px 1px 1px 1px silver; }
+      box-shadow: 2px 2px 2px 2px silver; }
     .post .sns-buttons .facebook {
       padding: 0.4rem;
       background: #3b75d4;
-      box-shadow: 1px 1px 1px 1px silver; }
+      box-shadow: 2px 2px 2px 2px silver; }
     .post .sns-buttons .line {
       padding: 0.4rem;
       background: #1dcd00;
-      box-shadow: 1px 1px 1px 1px silver; }
+      box-shadow: 2px 2px 2px 2px silver; }
   .post h2 {
     text-shadow: 1px 1px 0 silver; }
   .post h3 {
@@ -240,7 +239,7 @@ div.status-publish h2 a {
   padding-bottom: 0.1em;
   border-top: solid 2px black;
   background-color: #FFFFFF;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4); }
+  border: 1px solid silver; }
   .type-page h2 {
     text-shadow: 1px 1px 0 silver; }
   .type-page h3 {
@@ -259,8 +258,11 @@ div.status-publish h2 a {
   text-align: center;
   border: 1px solid #BABABA;
   color: #505050;
-  background: #FBFAF4;
-  box-shadow: 1px 1px 1px 1px silver; }
+  background: white;
+  border: 2px solid silver;
+  text-shadow: 1px 1px 0 silver;
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem; }
 
 .navigation {
   margin-top: 0.5em;
@@ -297,7 +299,7 @@ div.status-publish h2 a {
   padding: 0.5em;
   border-top: solid 2px black;
   background-color: #FFFFFF;
-  box-shadow: 1px 1px 1px 1px silver; }
+  border: 1px solid silver; }
 
 .comments-list {
   list-style: none;
@@ -308,7 +310,7 @@ div.status-publish h2 a {
     background: #DDFFDD;
     border: solid 1px #99FF99;
     border-radius: 2px;
-    box-shadow: 1px 1px 1px 1px silver; }
+    border: 1px solid silver; }
     .comments-list .comment a {
       text-decoration: none; }
       .comments-list .comment a:link {
@@ -336,7 +338,7 @@ div.status-publish h2 a {
     padding: 0.5em 0.5em;
     background: #26af48;
     /*ボタン色*/
-    box-shadow: 1px 1px 1px 1px silver; }
+    box-shadow: 2px 2px 2px 2px silver; }
     .comments-list .reply a {
       text-decoration: none; }
       .comments-list .reply a:link {
@@ -357,7 +359,7 @@ div.status-publish h2 a {
     text-decoration: none;
     background: #66ffb8;
     /*ボタン色*/
-    box-shadow: 1px 1px 1px 1px silver; }
+    box-shadow: 2px 2px 2px 2px silver; }
     .comment-respond a:link {
       color: white; }
     .comment-respond a:visited {
@@ -402,7 +404,7 @@ div.status-publish h2 a {
         background-color: #26af48;
         color: white;
         border-style: none;
-        box-shadow: 1px 1px 1px 1px silver; }
+        box-shadow: 2px 2px 2px 2px silver; }
 
 .widget {
   margin-top: 1em;
@@ -410,9 +412,10 @@ div.status-publish h2 a {
   padding: 0.5em 1em;
   border-top: solid 2px black;
   background-color: #FFFFFF;
-  box-shadow: 1px 1px 1px 1px silver; }
+  border: 1px solid silver; }
   .widget ul > li {
     list-style-type: none !important;
+    margin-top: 0.5rem;
     background: #fffdf7;
     border-radius: 4px;
     /*角の丸み*/
@@ -425,11 +428,11 @@ div.status-publish h2 a {
 #search-form {
   background-color: white;
   width: 270px;
-  height: 20px;
-  border: 1px silver solid; }
+  height: 30px;
+  border: 1px silver solid;
+  margin: 0; }
   #search-form input {
     vertical-align: top;
-    margin: 0px;
     height: 100%;
     box-sizing: border-box;
     background-color: transparent; }

@@ -78,7 +78,7 @@ body {
 	word-wrap: break-word;
 	-webkit-text-size-adjust: 100%;
 
-	margin:0;
+	margin: 0;
 }
 
 
@@ -86,24 +86,24 @@ body {
 	position: relative;
 
 	background-color: #FFFFFF;
-	box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+	border: 1px solid $colorBoxShadowMain;
+
+	text-align: center;
 
 	& h1 {
-		text-align: left;
+		text-shadow: 2px 2px 0 silver;
 	}
 
 	& p {
-		padding-left: 45px;
 		padding-bottom: 0.5em;
 	}
 }
 
 #logo {
-	font-size: 42px;
-	margin-top: 0.5em;
+	font-size: 45px;
+	margin-top: 0.2em;
 	margin-bottom: 0px;
-	padding-left: 45px;
-	padding-top: 40px;
+	padding-top: 0.7em;
 
 	text-shadow: 1px 1px 0 silver;
 
@@ -212,7 +212,7 @@ ul, ol {
 @mixin styleSnsBtns($color:red) {
 	padding: 0.4rem;
 	background: $color;
-	box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+	box-shadow: 2px 2px 2px 2px $colorBoxShadowMain;
 }
 
 .post {
@@ -224,7 +224,7 @@ ul, ol {
 	border-top: solid 2px black;
 
 	background-color: #FFFFFF;
-	box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+	border: 1px solid $colorBoxShadowMain;
 
 	/* 水色のカラーペン的なのを引く */
 	& strong {
@@ -304,7 +304,7 @@ div.status-publish {
 	border-top: solid 2px black;
 
 	background-color: #FFFFFF;
-	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
+	border: 1px solid $colorBoxShadowMain;
 
 	@include DefTextDecoration();
 }
@@ -318,8 +318,12 @@ div.status-publish {
 
 	border: 1px solid #BABABA;
 	color: #505050;
-	background: #FBFAF4;
-	box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+	background: white;
+	border: 2px solid $colorBoxShadowMain;
+	text-shadow: 1px 1px 0 silver;
+
+	font-size: 1.4rem;
+	margin-bottom: 0.2rem;
 }
 
 
@@ -359,7 +363,7 @@ div.status-publish {
 
 	border-top: solid 2px black;
 	background-color: #FFFFFF;
-	box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+	border: 1px solid $colorBoxShadowMain;
 }
 
 
@@ -378,7 +382,7 @@ $colorCommentBackground : #DDFFDD;
 		background: $colorCommentBackground;
 		border: solid 1px #99FF99;
 		border-radius: 2px;
-		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+		border: 1px solid $colorBoxShadowMain;
 
 		@include DefNonTextDecorationLink();
 
@@ -409,7 +413,7 @@ $colorCommentBackground : #DDFFDD;
 		display: inline-block;
 		padding: 0.5em 0.5em;
 		background: #26af48;/*ボタン色*/
-		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+		box-shadow: 2px 2px 2px 2px $colorBoxShadowMain;
 	}
 }
 
@@ -423,7 +427,7 @@ $colorCommentBackground : #DDFFDD;
 
 	@include DefNonTextDecorationLink(white) {
 		background: #66ffb8;/*ボタン色*/
-		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+		box-shadow: 2px 2px 2px 2px $colorBoxShadowMain;
 	}
 
 	& .comment-form {
@@ -482,7 +486,7 @@ $colorCommentBackground : #DDFFDD;
 				// submitボタンのを枠を非表示にする
 				border-style: none;
 
-				box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+				box-shadow: 2px 2px 2px 2px $colorBoxShadowMain;
 			}
 		}
 	}
@@ -496,10 +500,12 @@ $colorCommentBackground : #DDFFDD;
 	border-top: solid 2px black;
 
 	background-color: #FFFFFF;
-	box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;
+	border: 1px solid $colorBoxShadowMain;
+
 
 	& ul > li {
 		list-style-type: none!important;
+		margin-top: 0.5rem;
 
 		background: #fffdf7;
 		border-radius :4px;/*角の丸み*/
@@ -517,12 +523,12 @@ $colorCommentBackground : #DDFFDD;
 #search-form {
 	background-color: white;
 	width: 270px;
-	height: 20px;
+	height: 30px;
 	border: 1px silver solid;
+	margin: 0;
 
 	& input {
 		vertical-align: top;
-		margin: 0px;
 		height: 100%;
 		box-sizing: border-box;
 		background-color: transparent;
