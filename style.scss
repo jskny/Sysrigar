@@ -5,7 +5,7 @@
 	Theme URI: https://sysrigar.com/
 	Author: jskny
 	Author URI: https://sysrigar.com/
-	Version: 0.10
+	Version: 0.11
 	License: GNU General Public License
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	Original Author: Nori Takahashi
@@ -323,7 +323,7 @@ div.status-publish {
 	text-shadow: 1px 1px 0 silver;
 
 	font-size: 1.4rem;
-	margin-bottom: 0.2rem;
+	margin-bottom: 0.5rem;
 }
 
 
@@ -496,7 +496,13 @@ $colorCommentBackground : #DDFFDD;
 .widget {
 	margin-top: 1em;
 	position: relative;
-	padding:0.5em 1em;
+
+	padding-top:0em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+
+
 	border-top: solid 2px black;
 
 	background-color: #FFFFFF;
@@ -519,30 +525,37 @@ $colorCommentBackground : #DDFFDD;
 }
 
 
-/* https://qiita.com/motsu/items/56ee9e93a8d4d6a7ed9f */
-#search-form {
-	background-color: white;
-	width: 270px;
-	height: 30px;
-	border: 1px silver solid;
-	margin: 0;
+.widget_search {
+	/* https://qiita.com/motsu/items/56ee9e93a8d4d6a7ed9f */
+	& #search-form {
+		background-color: white;
+		width: 270px;
+		height: 30px;
+		border: 1px silver solid;
+		margin: 0;
 
-	& input {
-		vertical-align: top;
-		height: 100%;
-		box-sizing: border-box;
-		background-color: transparent;
+		& input {
+			vertical-align: top;
+			height: 100%;
+			box-sizing: border-box;
+			background-color: transparent;
+		}
+	}
+
+	// 検索文字列入力欄のボックス
+	& #search-text {
+		width: 220px;
+		border: none;
+		border-right: 1px green solid;
+	}
+
+	// 送信ボタン
+	& #search-submit {
+		width: 50px;
+		border: none;
 	}
 }
-#search-text {
-	width: 220px;
-	border: none;
-	border-right: 1px green solid;
-}
-#search-submit {
-	width: 50px;
-	border: none;
-}
+
 
 .clearfix:after{
 	content: "";
