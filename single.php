@@ -67,9 +67,6 @@ $doubleEncodeUrl = str_replace("%", "%25", $doubleEncodeUrl);
 		</div>
 	<?php endif; ?>
 </div><!-- /main -->
-<!-- Add start 2018/12/31 17:37 -->
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<!-- Add end 2018/12/31 17:37 -->
 <!-- /single.php -->
 <?php get_sidebar();
 get_footer(); ?>
