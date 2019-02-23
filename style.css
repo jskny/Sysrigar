@@ -197,20 +197,11 @@ ul, ol {
     width: 100%;
     margin: 1.5em 0;
     overflow: hidden; }
-    .post .skit-balloon .faceicon-left {
+    .post .skit-balloon .faceicon {
       float: left;
       margin-right: -90px;
       width: 80px; }
-      .post .skit-balloon .faceicon-left img {
-        width: 100%;
-        height: auto;
-        border: solid 3px #d7ebfe;
-        border-radius: 50%; }
-    .post .skit-balloon .faceicon-right {
-      float: left;
-      margin-right: -90px;
-      width: 80px; }
-      .post .skit-balloon .faceicon-right img {
+      .post .skit-balloon .faceicon img {
         width: 100%;
         height: auto;
         border: solid 3px #d7ebfe;

@@ -281,20 +281,7 @@ ul, ol {
 		margin: 1.5em 0;
 		overflow: hidden;
 
-		& .faceicon-left {
-			float: left;
-			margin-right: -90px;
-			width: 80px;
-
-			& img{
-				width: 100%;
-				height: auto;
-				border: solid 3px #d7ebfe;
-				border-radius: 50%;
-			}
-		}
-
-		& .faceicon-right {
+		& .faceicon {
 			float: left;
 			margin-right: -90px;
 			width: 80px;
