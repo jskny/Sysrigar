@@ -5,7 +5,7 @@
 	Theme URI: https://sysrigar.com/
 	Author: jskny
 	Author URI: https://sysrigar.com/
-	Version: 0.11
+	Version: 0.12
 	License: GNU General Public License
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	Original Author: Nori Takahashi
@@ -150,7 +150,8 @@ ul, ol {
   border-top: solid 2px black;
   background-color: #FFFFFF;
   border: 1px solid silver;
-  /* 水色のカラーペン的なのを引く */ }
+  /* 水色のカラーペン的なのを引く */
+  /* 引用ブロックを見やすくする */ }
   .post strong {
     background: linear-gradient(transparent 60%, #66ffb8 60%);
     text-shadow: 1px 1px 0 silver; }
@@ -182,6 +183,18 @@ ul, ol {
       padding: 0.4rem;
       background: #1dcd00;
       box-shadow: 2px 2px 2px 2px silver; }
+  .post blockquote {
+    position: relative;
+    padding: 20px 10px 10px 10px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: #F5F5F5;
+    border-left: 2px solid black; }
+  .post blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.5em; }
   .post h2 {
     text-shadow: 1px 1px 0 silver; }
   .post h3 {
