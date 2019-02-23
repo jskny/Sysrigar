@@ -150,8 +150,7 @@ ul, ol {
   border-top: solid 2px black;
   background-color: #FFFFFF;
   border: 1px solid silver;
-  /* 水色のカラーペン的なのを引く */
-  /* 引用ブロックを見やすくする */ }
+  /* 水色のカラーペン的なのを引く */ }
   .post strong {
     background: linear-gradient(transparent 60%, #66ffb8 60%);
     text-shadow: 1px 1px 0 silver; }
@@ -185,21 +184,64 @@ ul, ol {
       box-shadow: 2px 2px 2px 2px silver; }
   .post blockquote {
     position: relative;
-    padding: 10px 5px 5px 5px;
+    padding: 15px 5px 5px 5px;
     box-sizing: border-box;
     font-style: italic;
     background: #F5F5F5;
     border-left: 2px solid black; }
-  .post blockquote cite {
-    display: block;
-    text-align: right;
-    color: #888888;
-    font-size: 0.8em; }
+    .post blockquote cite {
+      display: block;
+      text-align: right;
+      color: #888888;
+      font-size: 0.7em; }
+  .post .skit-balloon {
+    width: 100%;
+    margin: 1.5em 0;
+    overflow: hidden; }
+    .post .skit-balloon .faceicon-left {
+      float: left;
+      margin-right: -90px;
+      width: 80px; }
+      .post .skit-balloon .faceicon-left img {
+        width: 100%;
+        height: auto;
+        border: solid 3px #d7ebfe;
+        border-radius: 50%; }
+    .post .skit-balloon .faceicon-right {
+      float: left;
+      margin-right: -90px;
+      width: 80px; }
+      .post .skit-balloon .faceicon-right img {
+        width: 100%;
+        height: auto;
+        border: solid 3px #d7ebfe;
+        border-radius: 50%; }
+    .post .skit-balloon .chatting {
+      width: 100%; }
+      .post .skit-balloon .chatting .says {
+        display: inline-block;
+        position: relative;
+        margin: 5px 0 0 105px;
+        padding: 17px 13px;
+        border-radius: 12px;
+        background: #d7ebfe; }
+        .post .skit-balloon .chatting .says p {
+          margin: 0;
+          padding: 0; }
+      .post .skit-balloon .chatting .says:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        left: -24px;
+        border: 12px solid transparent;
+        border-right: 12px solid #d7ebfe; }
   .post h2 {
     text-shadow: 1px 1px 0 silver; }
   .post h3 {
     border-bottom: 1px solid #BABABA;
-    text-shadow: 1px 1px 0 silver; }
+    text-shadow: 1px 1px 0 silver;
+    border-left: solid 5px #7db4e6; }
   .post h4 {
     border-bottom: 1px dotted #BABABA;
     text-shadow: 1px 1px 0 silver; }
@@ -257,7 +299,8 @@ div.status-publish h2 a {
     text-shadow: 1px 1px 0 silver; }
   .type-page h3 {
     border-bottom: 1px solid #BABABA;
-    text-shadow: 1px 1px 0 silver; }
+    text-shadow: 1px 1px 0 silver;
+    border-left: solid 5px #7db4e6; }
   .type-page h4 {
     border-bottom: 1px dotted #BABABA;
     text-shadow: 1px 1px 0 silver; }

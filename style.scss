@@ -50,6 +50,7 @@ $colorMenuBorder : #C0CBE9;
 	& h3 {
 		border-bottom: 1px solid #BABABA;
 		text-shadow: 1px 1px 0 silver;
+		border-left: solid 5px #7db4e6;
 	}
 
 	& h4 {
@@ -255,21 +256,85 @@ ul, ol {
 		}
 	}
 
-	/* 引用ブロックを見やすくする */
+	// 引用ブロックを見やすくする
 	& blockquote {
 		position: relative;
-		padding: 10px 5px 5px 5px;
+		padding: 15px 5px 5px 5px;
 		box-sizing: border-box;
 		font-style: italic;
 		background: #F5F5F5;
 		border-left: 2px solid black;
+
+		// 引用元
+		& cite {
+			display: block;
+			text-align: right;
+			color: #888888;
+			font-size: 0.7em;
+		}
 	}
 
-	& blockquote cite {
-		display: block;
-		text-align: right;
-		color: #888888;
-		font-size: 0.8em;
+	
+	// 寸劇用のタグ装飾
+	// https://saruwakakun.com/html-css/reference/speech-bubble
+	& .skit-balloon {
+		width: 100%;
+		margin: 1.5em 0;
+		overflow: hidden;
+
+		& .faceicon-left {
+			float: left;
+			margin-right: -90px;
+			width: 80px;
+
+			& img{
+				width: 100%;
+				height: auto;
+				border: solid 3px #d7ebfe;
+				border-radius: 50%;
+			}
+		}
+
+		& .faceicon-right {
+			float: left;
+			margin-right: -90px;
+			width: 80px;
+
+			& img{
+				width: 100%;
+				height: auto;
+				border: solid 3px #d7ebfe;
+				border-radius: 50%;
+			}
+		}
+
+		& .chatting {
+			width: 100%;
+
+			& .says {
+				display: inline-block;
+				position: relative; 
+				margin: 5px 0 0 105px;
+				padding: 17px 13px;
+				border-radius: 12px;
+				background: #d7ebfe;
+
+				& p {
+					margin: 0;
+					padding: 0;
+				}
+			}
+			
+			& .says:after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: 18px; 
+				left: -24px;
+				border: 12px solid transparent;
+				border-right: 12px solid #d7ebfe;
+			}
+		}
 	}
 
 	@include DefTextDecoration();
