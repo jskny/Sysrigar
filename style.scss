@@ -258,7 +258,7 @@ ul, ol {
 	/* 引用ブロックを見やすくする */
 	& blockquote {
 		position: relative;
-		padding: 20px 10px 10px 10px;
+		padding: 10px 5px 5px 5px;
 		box-sizing: border-box;
 		font-style: italic;
 		background: #F5F5F5;
@@ -269,7 +269,7 @@ ul, ol {
 		display: block;
 		text-align: right;
 		color: #888888;
-		font-size: 0.5em;
+		font-size: 0.8em;
 	}
 
 	@include DefTextDecoration();
