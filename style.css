@@ -184,11 +184,10 @@ ul, ol {
       box-shadow: 2px 2px 2px 2px silver; }
   .post blockquote {
     position: relative;
-    padding: 15px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
     box-sizing: border-box;
-    font-style: italic;
-    background: #F5F5F5;
-    border-left: 2px solid black; }
+    background: #F8F8F8;
+    border-left: 4px solid #0F0F0F; }
     .post blockquote cite {
       display: block;
       text-align: right;
