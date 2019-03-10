@@ -386,41 +386,47 @@ div.status-publish {
 
 	border: 1px solid #BABABA;
 	color: #505050;
-	background: white;
-	border: 2px solid $colorBoxShadowMain;
-	text-shadow: 1px 1px 0 silver;
+	background: #EFFBFF;
+	border: 1px solid $colorBoxShadowMain;
 
-	font-size: 1.4rem;
+	font-size: 1.2rem;
+
 	margin-bottom: 0.5rem;
+
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
 }
 
 
 .navigation {
 	margin-top: 0.5em;
-	padding-top: 0.5em;
-	padding-bottom: 0.2em;
-	font-size: 1.2em;
+	font-size: 1.5rem;
 	overflow: auto;
+
 
 	@include DefNonTextDecorationLink() {
 		display: block;
 		text-align: center;
 
-		border: 1px solid #BABABA;
+		border: 1px solid $colorBoxShadowMain;
+
+		padding-top: 0.4rem;
+		padding-bottom: 0.4rem;	
 
 		color: #505050;
-		background: white;
 	}
 
 	& .prev {
 		float: left;
 		display: inline-block;
-		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;	
+
+		background: #EFFBFF;
 	}
 	& .next {
 		float: right;
 		display: inline-block;
-		box-shadow: 1px 1px 1px 1px $colorBoxShadowMain;	
+
+		background: #F8E0E6;
 	}
 }
 

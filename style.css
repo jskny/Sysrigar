@@ -15,7 +15,8 @@
 */
 /* 各要素のサイズ */
 html {
-  height: 100%; }
+  height: 100%;
+}
 
 body {
   background-color: #F4F5F7;
@@ -24,122 +25,151 @@ body {
   font-size: 16px;
   word-wrap: break-word;
   -webkit-text-size-adjust: 100%;
-  margin: 0; }
+  margin: 0;
+}
 
 #header {
   position: relative;
   background-color: #FFFFFF;
   border: 1px solid silver;
-  text-align: center; }
-  #header h1 {
-    text-shadow: 2px 2px 0 silver; }
-  #header p {
-    padding-bottom: 0.5em; }
+  text-align: center;
+}
+#header h1 {
+  text-shadow: 2px 2px 0 silver;
+}
+#header p {
+  padding-bottom: 0.5em;
+}
 
 #logo {
   font-size: 45px;
   margin-top: 0.2em;
   margin-bottom: 0px;
   padding-top: 0.7em;
-  text-shadow: 1px 1px 0 silver; }
-  #logo a {
-    text-decoration: none; }
-    #logo a:link {
-      color: #393C37; }
-    #logo a:visited {
-      color: #393C37; }
-    #logo a:hover {
-      color: #393C37; }
-    #logo a:active {
-      color: #393C37; }
+  text-shadow: 1px 1px 0 silver;
+}
+#logo a {
+  text-decoration: none;
+}
+#logo a:link {
+  color: #393C37;
+}
+#logo a:visited {
+  color: #393C37;
+}
+#logo a:hover {
+  color: #393C37;
+}
+#logo a:active {
+  color: #393C37;
+}
 
 #container {
   width: 980px;
   overflow: hidden;
   min-height: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 #main {
   float: left;
   width: 660px;
-  padding: 0; }
+  padding: 0;
+}
 
 #sidebar {
   float: right;
-  width: 300px; }
-  #sidebar ul {
-    padding: 0; }
-  #sidebar .widget_archive label {
-    display: none; }
-  #sidebar .widget_archive select {
-    width: 260px;
-    height: 24px;
-    border: solid 1px #C0CBE9;
-    background-color: transparent;
-    color: #4d4d4d;
-    text-transform: uppercase;
-    font-size: 18px;
-    margin: 0;
-    padding: 0px 0px 0px 0px;
-    cursor: pointer;
-    -webkit-appearance: none; }
-  #sidebar .widget_categories label {
-    display: none; }
-  #sidebar .widget_categories select {
-    width: 260px;
-    height: 24px;
-    border: solid 1px #C0CBE9;
-    background-color: transparent;
-    color: #4d4d4d;
-    text-transform: uppercase;
-    font-size: 18px;
-    margin: 0;
-    padding: 0px 0px 0px 0px;
-    cursor: pointer;
-    -webkit-appearance: none; }
+  width: 300px;
+}
+#sidebar ul {
+  padding: 0;
+}
+#sidebar .widget_archive label {
+  display: none;
+}
+#sidebar .widget_archive select {
+  width: 260px;
+  height: 24px;
+  border: solid 1px #C0CBE9;
+  background-color: transparent;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0;
+  padding: 0px 0px 0px 0px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+#sidebar .widget_categories label {
+  display: none;
+}
+#sidebar .widget_categories select {
+  width: 260px;
+  height: 24px;
+  border: solid 1px #C0CBE9;
+  background-color: transparent;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0;
+  padding: 0px 0px 0px 0px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
 
 #footer {
   padding: 1em;
   text-align: center;
-  margin: 0; }
+  margin: 0;
+}
 
 ul, ol {
-  position: relative; }
+  position: relative;
+}
 
 .menu {
   text-align: left;
   border-top: dotted 1px #C0CBE9;
-  border-bottom: dotted 1px #C0CBE9; }
-  .menu ul {
-    padding: 0em;
-    /* 改行による li 間のスペースを消す。 */
-    list-style: none;
-    font-size: 0; }
-  .menu li {
-    width: 221px;
-    border-left: solid 6px #AAFFAA;
-    border-right: dotted 1px #C0CBE9;
-    background-color: #FFFFFF;
-    display: inline-block;
-    padding: 8px;
-    margin: 0em;
-    font-size: 16px; }
-  .menu a {
-    text-decoration: none;
-    display: block; }
-    .menu a:link {
-      color: #393C37; }
-    .menu a:visited {
-      color: #393C37; }
-    .menu a:hover {
-      color: #393C37; }
-    .menu a:active {
-      color: #393C37; }
-  .menu .current_page_item {
-    border-left: solid 6px #00FF00;
-    border-right: dotted 1px #44AEEA;
-    background-color: #DDFFDD; }
+  border-bottom: dotted 1px #C0CBE9;
+}
+.menu ul {
+  padding: 0em;
+  /* 改行による li 間のスペースを消す。 */
+  list-style: none;
+  font-size: 0;
+}
+.menu li {
+  width: 221px;
+  border-left: solid 6px #AAFFAA;
+  border-right: dotted 1px #C0CBE9;
+  background-color: #FFFFFF;
+  display: inline-block;
+  padding: 8px;
+  margin: 0em;
+  font-size: 16px;
+}
+.menu a {
+  text-decoration: none;
+  display: block;
+}
+.menu a:link {
+  color: #393C37;
+}
+.menu a:visited {
+  color: #393C37;
+}
+.menu a:hover {
+  color: #393C37;
+}
+.menu a:active {
+  color: #393C37;
+}
+.menu .current_page_item {
+  border-left: solid 6px #00FF00;
+  border-right: dotted 1px #44AEEA;
+  background-color: #DDFFDD;
+}
 
 .post {
   margin-top: 1em;
@@ -150,131 +180,164 @@ ul, ol {
   border-top: solid 2px black;
   background-color: #FFFFFF;
   border: 1px solid silver;
-  /* 水色のカラーペン的なのを引く */ }
-  .post strong {
-    background: linear-gradient(transparent 60%, #66ffb8 60%);
-    text-shadow: 1px 1px 0 silver; }
-  .post .sns-buttons {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    font-size: 20px;
-    text-align: left; }
-    .post .sns-buttons a {
-      text-decoration: none; }
-      .post .sns-buttons a:link {
-        color: white; }
-      .post .sns-buttons a:visited {
-        color: white; }
-      .post .sns-buttons a:hover {
-        color: white; }
-      .post .sns-buttons a:active {
-        color: white; }
-    .post .sns-buttons .twitter {
-      padding: 0.4rem;
-      background: #1da1f3;
-      box-shadow: 2px 2px 2px 2px silver; }
-    .post .sns-buttons .facebook {
-      padding: 0.4rem;
-      background: #3b75d4;
-      box-shadow: 2px 2px 2px 2px silver; }
-    .post .sns-buttons .line {
-      padding: 0.4rem;
-      background: #1dcd00;
-      box-shadow: 2px 2px 2px 2px silver; }
-  .post blockquote {
-    position: relative;
-    padding: 5px 5px 5px 5px;
-    box-sizing: border-box;
-    background: #F8F8F8;
-    border-left: 4px solid #0F0F0F; }
-    .post blockquote cite {
-      display: block;
-      text-align: right;
-      color: #888888;
-      font-size: 0.7em; }
-  .post .skit-balloon {
-    width: 100%;
-    margin: 1.5em 0;
-    overflow: hidden; }
-    .post .skit-balloon .faceicon {
-      float: left;
-      margin-right: -90px;
-      width: 80px; }
-      .post .skit-balloon .faceicon img {
-        width: 100%;
-        height: auto;
-        border: solid 3px #d7ebfe;
-        border-radius: 50%; }
-    .post .skit-balloon .chatting {
-      width: 100%; }
-      .post .skit-balloon .chatting .says {
-        display: inline-block;
-        position: relative;
-        margin: 5px 0 0 105px;
-        padding: 17px 13px;
-        border-radius: 12px;
-        background: #d7ebfe; }
-        .post .skit-balloon .chatting .says p {
-          margin: 0;
-          padding: 0; }
-      .post .skit-balloon .chatting .says:after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 18px;
-        left: -24px;
-        border: 12px solid transparent;
-        border-right: 12px solid #d7ebfe; }
-  .post h2 {
-    text-shadow: 1px 1px 0 silver; }
-  .post h3 {
-    border-bottom: 1px solid #BABABA;
-    text-shadow: 1px 1px 0 silver;
-    border-left: solid 5px #7db4e6; }
-  .post h4 {
-    border-bottom: 1px dotted #BABABA;
-    text-shadow: 1px 1px 0 silver; }
-  .post h5 {
-    border-bottom: 1px dotted #BABABA;
-    text-shadow: 1px 1px 0 silver; }
+  /* 水色のカラーペン的なのを引く */
+}
+.post strong {
+  background: linear-gradient(transparent 60%, #66ffb8 60%);
+  text-shadow: 1px 1px 0 silver;
+}
+.post .sns-buttons {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  text-align: left;
+}
+.post .sns-buttons a {
+  text-decoration: none;
+}
+.post .sns-buttons a:link {
+  color: white;
+}
+.post .sns-buttons a:visited {
+  color: white;
+}
+.post .sns-buttons a:hover {
+  color: white;
+}
+.post .sns-buttons a:active {
+  color: white;
+}
+.post .sns-buttons .twitter {
+  padding: 0.4rem;
+  background: #1da1f3;
+  box-shadow: 2px 2px 2px 2px silver;
+}
+.post .sns-buttons .facebook {
+  padding: 0.4rem;
+  background: #3b75d4;
+  box-shadow: 2px 2px 2px 2px silver;
+}
+.post .sns-buttons .line {
+  padding: 0.4rem;
+  background: #1dcd00;
+  box-shadow: 2px 2px 2px 2px silver;
+}
+.post blockquote {
+  position: relative;
+  padding: 5px 5px 5px 5px;
+  box-sizing: border-box;
+  background: #F8F8F8;
+  border-left: 4px solid #0F0F0F;
+}
+.post blockquote cite {
+  display: block;
+  text-align: right;
+  color: #888888;
+  font-size: 0.7em;
+}
+.post .skit-balloon {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+.post .skit-balloon .faceicon {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+.post .skit-balloon .faceicon img {
+  width: 100%;
+  height: auto;
+  border: solid 3px #d7ebfe;
+  border-radius: 50%;
+}
+.post .skit-balloon .chatting {
+  width: 100%;
+}
+.post .skit-balloon .chatting .says {
+  display: inline-block;
+  position: relative;
+  margin: 5px 0 0 105px;
+  padding: 17px 13px;
+  border-radius: 12px;
+  background: #d7ebfe;
+}
+.post .skit-balloon .chatting .says p {
+  margin: 0;
+  padding: 0;
+}
+.post .skit-balloon .chatting .says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid #d7ebfe;
+}
+.post h2 {
+  text-shadow: 1px 1px 0 silver;
+}
+.post h3 {
+  border-bottom: 1px solid #BABABA;
+  text-shadow: 1px 1px 0 silver;
+  border-left: solid 5px #7db4e6;
+}
+.post h4 {
+  border-bottom: 1px dotted #BABABA;
+  text-shadow: 1px 1px 0 silver;
+}
+.post h5 {
+  border-bottom: 1px dotted #BABABA;
+  text-shadow: 1px 1px 0 silver;
+}
 
 .post-meta {
   font-size: small;
   border-top: dotted 1px #999999;
   border-bottom: dotted 1px #999999;
-  display: block; }
-  .post-meta .category {
-    /* 
-    カテゴリーをボタンにしてみる
-    2018/6/16
-    https://saruwakakun.com/html-css/reference/buttons */ }
-    .post-meta .category a {
-      display: inline-block;
-      padding: 0.1em 0.2em;
-      text-decoration: none;
-      background: #1dcd00;
-      color: #FFFFFF;
-      border-radius: 2px;
-      box-shadow: 0px 0px 0px 2px #1dcd00;
-      border: dashed 1px #FFFFFF; }
+  display: block;
+}
+.post-meta .category {
+  /* 
+  カテゴリーをボタンにしてみる
+  2018/6/16
+  https://saruwakakun.com/html-css/reference/buttons */
+}
+.post-meta .category a {
+  display: inline-block;
+  padding: 0.1em 0.2em;
+  text-decoration: none;
+  background: #1dcd00;
+  color: #FFFFFF;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px 2px #1dcd00;
+  border: dashed 1px #FFFFFF;
+}
 
 .footer-post-meta {
   font-size: small;
   border-top: dotted 1px #999999;
   border-bottom: dotted 1px #999999;
-  display: block; }
+  display: block;
+}
 
 div.status-publish h2 a {
-  text-decoration: none; }
-  div.status-publish h2 a:link {
-    color: #393C37; }
-  div.status-publish h2 a:visited {
-    color: #393C37; }
-  div.status-publish h2 a:hover {
-    color: #393C37; }
-  div.status-publish h2 a:active {
-    color: #393C37; }
+  text-decoration: none;
+}
+div.status-publish h2 a:link {
+  color: #393C37;
+}
+div.status-publish h2 a:visited {
+  color: #393C37;
+}
+div.status-publish h2 a:hover {
+  color: #393C37;
+}
+div.status-publish h2 a:active {
+  color: #393C37;
+}
 
 .type-page {
   margin-top: 1em;
@@ -284,19 +347,24 @@ div.status-publish h2 a {
   padding-bottom: 0.1em;
   border-top: solid 2px black;
   background-color: #FFFFFF;
-  border: 1px solid silver; }
-  .type-page h2 {
-    text-shadow: 1px 1px 0 silver; }
-  .type-page h3 {
-    border-bottom: 1px solid #BABABA;
-    text-shadow: 1px 1px 0 silver;
-    border-left: solid 5px #7db4e6; }
-  .type-page h4 {
-    border-bottom: 1px dotted #BABABA;
-    text-shadow: 1px 1px 0 silver; }
-  .type-page h5 {
-    border-bottom: 1px dotted #BABABA;
-    text-shadow: 1px 1px 0 silver; }
+  border: 1px solid silver;
+}
+.type-page h2 {
+  text-shadow: 1px 1px 0 silver;
+}
+.type-page h3 {
+  border-bottom: 1px solid #BABABA;
+  text-shadow: 1px 1px 0 silver;
+  border-left: solid 5px #7db4e6;
+}
+.type-page h4 {
+  border-bottom: 1px dotted #BABABA;
+  text-shadow: 1px 1px 0 silver;
+}
+.type-page h5 {
+  border-bottom: 1px dotted #BABABA;
+  text-shadow: 1px 1px 0 silver;
+}
 
 .more-link {
   display: block;
@@ -304,153 +372,192 @@ div.status-publish h2 a {
   text-align: center;
   border: 1px solid #BABABA;
   color: #505050;
-  background: white;
-  border: 2px solid silver;
-  text-shadow: 1px 1px 0 silver;
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem; }
+  background: #EFFBFF;
+  border: 1px solid silver;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
 
 .navigation {
   margin-top: 0.5em;
-  padding-top: 0.5em;
-  padding-bottom: 0.2em;
-  font-size: 1.2em;
-  overflow: auto; }
-  .navigation a {
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    border: 1px solid #BABABA;
-    color: #505050;
-    background: white; }
-    .navigation a:link {
-      color: #393C37; }
-    .navigation a:visited {
-      color: #393C37; }
-    .navigation a:hover {
-      color: #393C37; }
-    .navigation a:active {
-      color: #393C37; }
-  .navigation .prev {
-    float: left;
-    display: inline-block;
-    box-shadow: 1px 1px 1px 1px silver; }
-  .navigation .next {
-    float: right;
-    display: inline-block;
-    box-shadow: 1px 1px 1px 1px silver; }
+  font-size: 1.5rem;
+  overflow: auto;
+}
+.navigation a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border: 1px solid silver;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  color: #505050;
+}
+.navigation a:link {
+  color: #393C37;
+}
+.navigation a:visited {
+  color: #393C37;
+}
+.navigation a:hover {
+  color: #393C37;
+}
+.navigation a:active {
+  color: #393C37;
+}
+.navigation .prev {
+  float: left;
+  display: inline-block;
+  background: #EFFBFF;
+}
+.navigation .next {
+  float: right;
+  display: inline-block;
+  background: #F8E0E6;
+}
 
 #comment-area {
   margin-top: 0.5em;
   padding: 0.5em;
   border-top: solid 2px black;
   background-color: #FFFFFF;
-  border: 1px solid silver; }
+  border: 1px solid silver;
+}
 
 .comments-list {
   list-style: none;
   margin: 0px;
-  padding: 0px; }
-  .comments-list .comment {
-    padding: 0.5em 0.5em;
-    background: #DDFFDD;
-    border: solid 1px #99FF99;
-    border-radius: 2px;
-    border: 1px solid silver; }
-    .comments-list .comment a {
-      text-decoration: none; }
-      .comments-list .comment a:link {
-        color: #393C37; }
-      .comments-list .comment a:visited {
-        color: #393C37; }
-      .comments-list .comment a:hover {
-        color: #393C37; }
-      .comments-list .comment a:active {
-        color: #393C37; }
-    .comments-list .comment p {
-      margin: 0px;
-      font-size: 14px;
-      background: white; }
-  .comments-list .comment-author {
-    display: inline-block;
-    padding: 0.5em 0.5em;
-    background: #88EE88;
-    font-size: 14px; }
-  .comments-list .comment-meta {
-    display: inline-block;
-    font-size: 12px; }
-  .comments-list .reply {
-    display: inline-block;
-    padding: 0.5em 0.5em;
-    background: #26af48;
-    /*ボタン色*/
-    box-shadow: 2px 2px 2px 2px silver; }
-    .comments-list .reply a {
-      text-decoration: none; }
-      .comments-list .reply a:link {
-        color: white; }
-      .comments-list .reply a:visited {
-        color: white; }
-      .comments-list .reply a:hover {
-        color: white; }
-      .comments-list .reply a:active {
-        color: white; }
+  padding: 0px;
+}
+.comments-list .comment {
+  padding: 0.5em 0.5em;
+  background: #DDFFDD;
+  border: solid 1px #99FF99;
+  border-radius: 2px;
+  border: 1px solid silver;
+}
+.comments-list .comment a {
+  text-decoration: none;
+}
+.comments-list .comment a:link {
+  color: #393C37;
+}
+.comments-list .comment a:visited {
+  color: #393C37;
+}
+.comments-list .comment a:hover {
+  color: #393C37;
+}
+.comments-list .comment a:active {
+  color: #393C37;
+}
+.comments-list .comment p {
+  margin: 0px;
+  font-size: 14px;
+  background: white;
+}
+.comments-list .comment-author {
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  background: #88EE88;
+  font-size: 14px;
+}
+.comments-list .comment-meta {
+  display: inline-block;
+  font-size: 12px;
+}
+.comments-list .reply {
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  background: #26af48;
+  /*ボタン色*/
+  box-shadow: 2px 2px 2px 2px silver;
+}
+.comments-list .reply a {
+  text-decoration: none;
+}
+.comments-list .reply a:link {
+  color: white;
+}
+.comments-list .reply a:visited {
+  color: white;
+}
+.comments-list .reply a:hover {
+  color: white;
+}
+.comments-list .reply a:active {
+  color: white;
+}
 
 .comment-respond {
   margin: 0px;
   padding: 0.5em 0.5em;
   background: white;
-  text-align: left; }
-  .comment-respond a {
-    text-decoration: none;
-    background: #66ffb8;
-    /*ボタン色*/
-    box-shadow: 2px 2px 2px 2px silver; }
-    .comment-respond a:link {
-      color: white; }
-    .comment-respond a:visited {
-      color: white; }
-    .comment-respond a:hover {
-      color: white; }
-    .comment-respond a:active {
-      color: white; }
-  .comment-respond .comment-form {
-    margin: 0.1rem; }
-    .comment-respond .comment-form .comment-reply-title {
-      margin: 0px; }
-    .comment-respond .comment-form .comment-notes {
-      margin: 0px;
-      font-size: small; }
-    .comment-respond .comment-form textarea {
-      display: block;
-      padding: 0.2rem 0.2rem;
-      -webkit-box-sizing: border-box;
-      -khtml-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-      box-sizing: border-box;
-      width: 100%;
-      height: 100px;
-      resize: none; }
-    .comment-respond .comment-form input {
-      display: block;
-      padding: 0.2rem 0.2rem;
-      -webkit-box-sizing: border-box;
-      -khtml-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-      box-sizing: border-box;
-      width: 100%;
-      height: auto; }
-    .comment-respond .comment-form .form-submit {
-      margin-top: 1rem; }
-      .comment-respond .comment-form .form-submit .submit {
-        padding: 15px 20px;
-        font-size: 1.2rem;
-        background-color: #26af48;
-        color: white;
-        border-style: none;
-        box-shadow: 2px 2px 2px 2px silver; }
+  text-align: left;
+}
+.comment-respond a {
+  text-decoration: none;
+  background: #66ffb8;
+  /*ボタン色*/
+  box-shadow: 2px 2px 2px 2px silver;
+}
+.comment-respond a:link {
+  color: white;
+}
+.comment-respond a:visited {
+  color: white;
+}
+.comment-respond a:hover {
+  color: white;
+}
+.comment-respond a:active {
+  color: white;
+}
+.comment-respond .comment-form {
+  margin: 0.1rem;
+}
+.comment-respond .comment-form .comment-reply-title {
+  margin: 0px;
+}
+.comment-respond .comment-form .comment-notes {
+  margin: 0px;
+  font-size: small;
+}
+.comment-respond .comment-form textarea {
+  display: block;
+  padding: 0.2rem 0.2rem;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+.comment-respond .comment-form input {
+  display: block;
+  padding: 0.2rem 0.2rem;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+.comment-respond .comment-form .form-submit {
+  margin-top: 1rem;
+}
+.comment-respond .comment-form .form-submit .submit {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  background-color: #26af48;
+  color: white;
+  border-style: none;
+  box-shadow: 2px 2px 2px 2px silver;
+}
 
 .widget {
   margin-top: 1em;
@@ -461,61 +568,77 @@ div.status-publish h2 a {
   padding-right: 1em;
   border-top: solid 2px black;
   background-color: #FFFFFF;
-  border: 1px solid silver; }
-  .widget ul > li {
-    list-style-type: none !important;
-    margin-top: 0.5rem;
-    background: #fffdf7;
-    border-radius: 4px;
-    /*角の丸み*/
-    box-shadow: 1px 1px 1px 1px silver;
-    padding: 0.5em 0.5em 0.5em 0.5em; }
-  .widget .title {
-    font-size: 24px; }
+  border: 1px solid silver;
+}
+.widget ul > li {
+  list-style-type: none !important;
+  margin-top: 0.5rem;
+  background: #fffdf7;
+  border-radius: 4px;
+  /*角の丸み*/
+  box-shadow: 1px 1px 1px 1px silver;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+.widget .title {
+  font-size: 24px;
+}
 
 .widget_search {
-  /* https://qiita.com/motsu/items/56ee9e93a8d4d6a7ed9f */ }
-  .widget_search #search-form {
-    background-color: white;
-    width: 270px;
-    height: 30px;
-    border: 1px silver solid;
-    margin: 0; }
-    .widget_search #search-form input {
-      vertical-align: top;
-      height: 100%;
-      box-sizing: border-box;
-      background-color: transparent; }
-  .widget_search #search-text {
-    width: 220px;
-    border: none;
-    border-right: 1px green solid; }
-  .widget_search #search-submit {
-    width: 50px;
-    border: none; }
+  /* https://qiita.com/motsu/items/56ee9e93a8d4d6a7ed9f */
+}
+.widget_search #search-form {
+  background-color: white;
+  width: 270px;
+  height: 30px;
+  border: 1px silver solid;
+  margin: 0;
+}
+.widget_search #search-form input {
+  vertical-align: top;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+.widget_search #search-text {
+  width: 220px;
+  border: none;
+  border-right: 1px green solid;
+}
+.widget_search #search-submit {
+  width: 50px;
+  border: none;
+}
 
 .clearfix:after {
   content: "";
   clear: both;
-  display: block; }
+  display: block;
+}
 
 .footer-post-meta {
-  font-size: small; }
+  font-size: small;
+}
 
 #breadcrumb {
   clear: both;
   display: block;
-  font-size: small; }
-  #breadcrumb a {
-    text-decoration: none; }
-    #breadcrumb a:link {
-      color: #0000FF; }
-    #breadcrumb a:visited {
-      color: #0000FF; }
-    #breadcrumb a:hover {
-      color: #00AAFF; }
-    #breadcrumb a:active {
-      color: #393C37; }
+  font-size: small;
+}
+#breadcrumb a {
+  text-decoration: none;
+}
+#breadcrumb a:link {
+  color: #0000FF;
+}
+#breadcrumb a:visited {
+  color: #0000FF;
+}
+#breadcrumb a:hover {
+  color: #00AAFF;
+}
+#breadcrumb a:active {
+  color: #393C37;
+}
 
 pre {
   background-color: transparent;
@@ -529,22 +652,26 @@ pre {
   padding: 0.2em;
   white-space: pre;
   white-space: pre-wrap;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+}
 
 /* スマホ　760px以下 */
 @media only screen and (max-width: 760px) {
   #container {
-    width: 100%; }
+    width: 100%;
+  }
 
   #header h1 {
     font-size: 36px;
     text-align: center;
     padding-top: 0.7em;
-    padding-left: 0px; }
+    padding-left: 0px;
+  }
   #header p {
     text-align: center;
     padding-left: 0px;
-    padding-bottom: 0px; }
+    padding-bottom: 0px;
+  }
 
   #main {
     float: none;
@@ -552,38 +679,47 @@ pre {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+  }
 
   #sidebar {
     float: none;
     width: 100%;
     padding-top: 0;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+  }
 
   #footer {
-    text-align: center; }
+    text-align: center;
+  }
 
   .menu {
-    overflow: hidden; }
-    .menu li {
-      border: solid 0px #99FF99;
-      width: 50%;
-      text-align: center;
-      padding: 0em;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      font-size: 14px; }
-    .menu .current_page_item {
-      border: solid 0px #99FF99;
-      background-color: #DDFFDD; }
+    overflow: hidden;
+  }
+  .menu li {
+    border: solid 0px #99FF99;
+    width: 50%;
+    text-align: center;
+    padding: 0em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 14px;
+  }
+  .menu .current_page_item {
+    border: solid 0px #99FF99;
+    background-color: #DDFFDD;
+  }
 
   .post {
     margin-top: 0.5em;
-    border-top: solid 2px black; }
+    border-top: solid 2px black;
+  }
 
   .widget {
-    margin-top: 1em; } }
+    margin-top: 1em;
+  }
+}
 .wp-caption {
   margin: 10px;
   padding-top: 4px;
@@ -593,26 +729,29 @@ pre {
   border-radius: 3px;
   background-color: #f3f3f3;
   text-align: center;
-  -khtml-border-radius: 3px; }
-  .wp-caption img {
-    margin: 0;
-    padding: 0;
-    -ms-interpolation-mode: bicubic;
-    border: 0;
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle; }
+  -khtml-border-radius: 3px;
+}
+.wp-caption img {
+  margin: 0;
+  padding: 0;
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
 
 .wp-caption-text,
 .gallery-caption {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
-.wp-caption
-.wp-caption-dd {
+.wp-caption .wp-caption-dd {
   margin: 0;
   padding: 0 4px 5px;
   font-size: 11px;
-  line-height: 17px; }
+  line-height: 17px;
+}
 
 img {
   margin: 0;
@@ -621,7 +760,8 @@ img {
   border: 0;
   height: auto;
   max-width: 100%;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 .aligncenter {
   clear: both;
@@ -631,7 +771,8 @@ img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  text-align: center; }
+  text-align: center;
+}
 
 .alignright {
   clear: both;
@@ -640,7 +781,8 @@ img {
   margin: 0 0 1em 1.5em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .alignleft {
   clear: both;
@@ -649,6 +791,7 @@ img {
   margin: 0 1.5em 1em 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /*# sourceMappingURL=style.css.map */
