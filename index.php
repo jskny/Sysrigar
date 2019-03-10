@@ -22,8 +22,8 @@
 
 	if ( $wp_query->max_num_pages > 1 ) : // ここからページャー ?>
 		<div class="navigation clearfix">
-			<div class="prev"><?php next_posts_link(' &laquo; '); ?></div>
-			<div class="next"><?php previous_posts_link(' &raquo; '); ?></div>
+			<div class="prev"><?php next_posts_link(' &laquo; Previous '); ?></div>
+			<div class="next"><?php previous_posts_link(' NEXT　&raquo; '); ?></div>
 		</div>
 	<?php endif; // ページャーここまで ?>
 </div><!-- /main -->
