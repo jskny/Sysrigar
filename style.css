@@ -339,7 +339,7 @@ div.status-publish h2 a:active {
   color: #393C37;
 }
 
-.type-page {
+.type-page, .type-attachment {
   margin-top: 1em;
   padding-top: 0.5em;
   padding-left: 0.5em;
@@ -349,19 +349,19 @@ div.status-publish h2 a:active {
   background-color: #FFFFFF;
   border: 1px solid silver;
 }
-.type-page h2 {
+.type-page h2, .type-attachment h2 {
   text-shadow: 1px 1px 0 silver;
 }
-.type-page h3 {
+.type-page h3, .type-attachment h3 {
   border-bottom: 1px solid #BABABA;
   text-shadow: 1px 1px 0 silver;
   border-left: solid 5px #7db4e6;
 }
-.type-page h4 {
+.type-page h4, .type-attachment h4 {
   border-bottom: 1px dotted #BABABA;
   text-shadow: 1px 1px 0 silver;
 }
-.type-page h5 {
+.type-page h5, .type-attachment h5 {
   border-bottom: 1px dotted #BABABA;
   text-shadow: 1px 1px 0 silver;
 }
