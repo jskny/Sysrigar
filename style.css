@@ -117,7 +117,7 @@ ul, ol {
     list-style: none;
     font-size: 0; }
   .menu li {
-    width: 221px;
+    width: 249px;
     border-left: solid 6px #AAFFAA;
     border-right: dotted 1px #C0CBE9;
     background-color: #FFFFFF;
@@ -470,7 +470,7 @@ div.status-publish h2 a {
   padding-left: 1em;
   padding-right: 1em;
   border-top: solid 2px black;
-  background-color: #EFFFEF;
+  background-color: #F5FFF5;
   border: 1px solid silver; }
   .widget ul > li {
     list-style-type: none !important;
