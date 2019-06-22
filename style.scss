@@ -59,6 +59,13 @@ $colorMenuBorder : #C0CBE9;
 	}
 
 	& h5 {
+		font-size: 1rem;
+		border-bottom: 1px dotted #BABABA;
+		text-shadow: 1px 1px 0 silver;
+	}
+
+	& h6 {
+		font-size: 1rem;
 		border-bottom: 1px dotted #BABABA;
 		text-shadow: 1px 1px 0 silver;
 	}
