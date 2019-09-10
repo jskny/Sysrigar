@@ -26,6 +26,24 @@ $colorBodyBackground : #F4F5F7;
 $colorMenuBorder : #C0CBE9;
 
 
+// 日本語フォントの指定
+// https://digitalcontent.tokyo/japanese-text-css-3/
+@font-face {
+font-family: "MyYuGothicM";
+font-weight: normal;
+src:local("YuGothic-Medium"),
+	local("Yu Gothic Medium"),
+	local("YuGothic-Regular");
+}
+
+@font-face {
+font-family: "MyYuGothicM";
+font-weight: bold;
+src:local("YuGothic-Bold"),
+	local("Yu Gothic");
+}
+
+
 // 下線を消したAタグ
 @mixin DefNonTextDecorationLink($color:#393C37) {
 	& a {
@@ -74,6 +92,12 @@ $colorMenuBorder : #C0CBE9;
 
 html {
 	height: 100%;
+
+	// 日本語フォントの指定
+	// https://digitalcontent.tokyo/japanese-text-css-3/
+	font-family: -apple-system, BlinkMacSystemFont,
+	"Hiragino Kaku Gothic ProN",
+	MyYuGothicM, Meiryo, sans-serif;
 }
 
 
