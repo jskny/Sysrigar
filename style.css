@@ -24,12 +24,12 @@
   src: local("YuGothic-Bold"), local("Yu Gothic"); }
 html {
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYuGothicM, Meiryo, sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYuGothicM, Meiryo, sans-serif;
+  font-feature-settings: "pkna" 1; }
 
 body {
   background-color: #F4F5F7;
   color: #393C37;
-  font-family: "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "MS UI Gothic", sans-serif;
   font-size: 16px;
   word-wrap: break-word;
   -webkit-text-size-adjust: 100%;
