@@ -20,6 +20,8 @@ $widthContainer : 1000px;
 $widthMain : 100%;
 $widthSidebar : 100%;
 
+$lineHightText : 160%;
+
 $colorBoxShadowMain : silver;
 
 $colorBodyBackground : #F4F5F7;
@@ -110,6 +112,8 @@ body {
 	font-size: 16px;
 	word-wrap: break-word;
 	-webkit-text-size-adjust: 100%;
+
+	line-height: $lineHightText;
 
 	margin: 0;
 }
@@ -254,10 +258,10 @@ ul, ol {
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 	padding-bottom: 0.1em;
-	border-top: solid 2px black;
 
+	border-top: solid 2px black;
 	background-color: #FFFFFF;
-	border: 1px solid $colorBoxShadowMain;
+	border: 2px solid $colorBoxShadowMain;
 
 	/* 水色のカラーペン的なのを引く */
 	& strong {
@@ -404,7 +408,7 @@ div.status-publish {
 	border-top: solid 2px black;
 
 	background-color: #FFFFFF;
-	border: 1px solid $colorBoxShadowMain;
+	border: 2px solid $colorBoxShadowMain;
 
 	@include DefTextDecoration();
 }
@@ -416,7 +420,6 @@ div.status-publish {
 	text-decoration: none;
 	text-align: center;
 
-	border: 1px solid #BABABA;
 	color: #505050;
 	background: #EFFBFF;
 	border: 1px solid $colorBoxShadowMain;
@@ -431,7 +434,7 @@ div.status-publish {
 
 
 .navigation {
-	margin-top: 0.5em;
+	margin-top: 1rem;
 	font-size: 1.5rem;
 	overflow: auto;
 
@@ -440,10 +443,12 @@ div.status-publish {
 		display: block;
 		text-align: center;
 
-		border: 1px solid $colorBoxShadowMain;
+		border: 2px solid $colorBoxShadowMain;
 
-		padding-top: 0.4rem;
-		padding-bottom: 0.4rem;	
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 
 		color: #505050;
 	}
@@ -464,8 +469,7 @@ div.status-publish {
 
 
 #comment-area {
-	margin-top: 0.5em;
-	padding: 0.5em;
+	margin-top: 1rem;
 
 	border-top: solid 2px black;
 	background-color: #FFFFFF;
@@ -497,6 +501,12 @@ $colorCommentBackground : #DDFFDD;
 			font-size: 14px;
 			background: white;
 		}
+	}
+
+	& .comment-reply-title {
+	}
+
+	& .comment-form {
 	}
 
 	& .comment-author {
@@ -600,19 +610,16 @@ $colorCommentBackground : #DDFFDD;
 
 
 .widget {
-	margin-top: 1em;
+	margin-top: 1rem;
 	position: relative;
 
-	padding-top:0em;
-	padding-bottom: 1em;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-top:0rem;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 
-
-	border-top: solid 2px black;
-
-	background-color: #F5FFF5;
-	border: 1px solid $colorBoxShadowMain;
+	background-color: #FFFFFF;
+	border: 2px solid $colorBoxShadowMain;
 
 
 	& ul > li {
@@ -637,7 +644,7 @@ $colorCommentBackground : #DDFFDD;
 		background-color: white;
 		width: 270px;
 		height: 30px;
-		border: 1px silver solid;
+		border: 2px silver solid;
 		margin: 0;
 
 		& input {
@@ -688,17 +695,15 @@ $colorCommentBackground : #DDFFDD;
 }
 
 
+// コードとかコマンドとかの表示用
 pre {
-	background-color: transparent;
 	background-color: rgba(0, 0, 0, 0.01);
-	border: 1px solid #eaeaea;
-	border: 1px solid rgba(51, 51, 51, 0.1);
-	line-height: 1.2;
-	margin-bottom: 1.6em;
+	border: 2px solid rgba(51, 51, 51, 0.1);
+	line-height: $lineHightText;
+	margin-bottom: 1rem;
 	max-width: 100%;
 	overflow: auto;
-	padding: 0.2em;
-	white-space: pre;
+	padding: 0.1rem;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
@@ -773,7 +778,7 @@ pre {
 .wp-caption {
 	margin: 10px;
 	padding-top: 4px;
-	border: 1px solid #ddd;
+	border: 2px solid #ddd;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
