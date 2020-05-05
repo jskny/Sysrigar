@@ -676,6 +676,20 @@ img {
     background-color: #303030;
     color: white; }
 
+  #logo a {
+    text-decoration: none; }
+    #logo a:link {
+      color: white; }
+    #logo a:visited {
+      color: white; }
+    #logo a:hover {
+      color: white; }
+    #logo a:active {
+      color: white; }
+
+  h1 {
+    color: white; }
+
   .menu {
     color: white; }
     .menu li {

@@ -872,6 +872,14 @@ img {
 		color: white;
 	}
 
+	#logo {
+		@include DefNonTextDecorationLink(white);
+	}
+
+	h1 {
+		color: white;
+	}
+
 	.menu {	
 		color:white;
 
