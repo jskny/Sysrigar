@@ -673,9 +673,9 @@ img {
     color: white; }
 
   a:link {
-    color: #6060FF; }
+    color: #7070FF; }
   a:visited {
-    color: #6060FF; }
+    color: #7070FF; }
   a:hover {
     color: #00AAFF; }
   a:active {
@@ -701,6 +701,16 @@ img {
 
   .menu {
     color: white; }
+    .menu a {
+      text-decoration: none; }
+      .menu a:link {
+        color: white; }
+      .menu a:visited {
+        color: white; }
+      .menu a:hover {
+        color: white; }
+      .menu a:active {
+        color: white; }
     .menu li {
       background-color: #505050;
       color: white; }
@@ -739,6 +749,16 @@ img {
   .more-link {
     color: white;
     background: #606060; }
+    .more-link a {
+      text-decoration: none; }
+      .more-link a:link {
+        color: white; }
+      .more-link a:visited {
+        color: white; }
+      .more-link a:hover {
+        color: white; }
+      .more-link a:active {
+        color: white; }
 
   pre {
     background-color: #4F4F4F; }
