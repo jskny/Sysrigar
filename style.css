@@ -673,9 +673,9 @@ img {
     color: white; }
 
   a:link {
-    color: #7070FF; }
+    color: #9090FF; }
   a:visited {
-    color: #7070FF; }
+    color: #9090FF; }
   a:hover {
     color: #00AAFF; }
   a:active {
@@ -683,7 +683,7 @@ img {
 
   #header {
     background-color: #202020;
-    color: white; }
+    color: #66ffb8; }
 
   #logo a {
     text-decoration: none; }
@@ -715,8 +715,6 @@ img {
       background-color: #505050;
       color: white; }
     .menu .current_page_item {
-      border-left: solid 6px #00FF00;
-      border-right: dotted 1px #44AEEA;
       background-color: #60A060;
       color: white; }
 
@@ -739,7 +737,7 @@ img {
     color: #FFFFFF; }
 
   #sidebar {
-    background-color: #303030;
+    background-color: black;
     color: white; }
 
   .type-page, .type-attachment {
@@ -749,16 +747,6 @@ img {
   .more-link {
     color: white;
     background: #606060; }
-    .more-link a {
-      text-decoration: none; }
-      .more-link a:link {
-        color: white; }
-      .more-link a:visited {
-        color: white; }
-      .more-link a:hover {
-        color: white; }
-      .more-link a:active {
-        color: white; }
 
   pre {
     background-color: #4F4F4F; }

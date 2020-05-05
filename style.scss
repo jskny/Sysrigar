@@ -868,15 +868,15 @@ img {
 	}
 
 	a {
-		&:link { color:#7070FF; }
-		&:visited { color:#7070FF; }
+		&:link { color:#9090FF; }
+		&:visited { color:#9090FF; }
 		&:hover { color:#00AAFF; }
 		&:active { color:#393C37; }
 	}
 
 	#header {
 		background-color: #202020;
-		color: white;
+		color: #66ffb8;
 	}
 
 	#logo {
@@ -897,8 +897,6 @@ img {
 		}
 
 		& .current_page_item {
-			border-left: solid 6px #00FF00;
-			border-right: dotted 1px #44AEEA;
 			background-color: #60A060;
 			color: white;
 		}
@@ -944,7 +942,7 @@ img {
 	}
 
 	#sidebar {
-		background-color: #303030;
+		background-color: black;
 		color: white;
 	}
 
@@ -956,8 +954,6 @@ img {
 	.more-link {
 		color: white;
 		background: #606060;
-
-		@include DefNonTextDecorationLink(white);
 	}
 
 	// コードとかコマンドとかの表示用
