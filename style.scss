@@ -979,10 +979,36 @@ img {
 		}
 	}
 	
-	
 	.comment-respond {
 		background: white;
 	}
 
+	div.status-publish {
+		& h2 {
+			@include DefNonTextDecorationLink(white);
+		}
+	}
+
+	.navigation {
+		@include DefNonTextDecorationLink(white) {
+			display: block;
+			text-align: center;
+	
+			border: 2px solid $colorBoxShadowMain;
+	
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+	
+			color: white;
+		}
+	}
+
+	.comments-list {
+		& .comment {
+			@include DefNonTextDecorationLink(white);
+		}
+	}
 
 }
