@@ -858,3 +858,69 @@ img {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+
+// ダークモード対応
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #202020;
+		color: white;
+	}
+
+	#header {
+		background-color: black;
+	}
+
+
+	.menu {	
+		& li {
+			background-color: black;
+		}
+
+		& .current_page_item {
+			border-left: solid 6px #00FF00;
+			border-right: dotted 1px #44AEEA;
+			background-color: #206040;
+		}
+	}
+
+
+	.post {	
+		border-top: solid 2px white;
+		background-color: black;
+
+		/* 水色のカラーペン的なのを引く */
+		& strong {
+			background: linear-gradient(transparent 60%, #44dda7 60%);
+			text-shadow: 1px 1px 0 $colorBoxShadowMain;
+		}
+
+		// 引用ブロックを見やすくする
+		& blockquote {
+			background: #4F4F4F;
+	
+			// 引用元
+			& cite {
+				color: #888888;
+			}
+		}
+	
+		& .skit-balloon {
+			& .chatting {
+				& .says {
+					background: #303030;
+				}
+			}
+		}
+	}
+	
+	.post-meta {
+		& .category {
+			& a {
+				background: #1dcd00;
+				color: #FFFFFF;
+			}
+		}
+	}
+
+}

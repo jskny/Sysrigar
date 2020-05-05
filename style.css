@@ -667,4 +667,37 @@ img {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #202020;
+    color: white; }
+
+  #header {
+    background-color: black; }
+
+  .menu li {
+    background-color: black; }
+  .menu .current_page_item {
+    border-left: solid 6px #00FF00;
+    border-right: dotted 1px #44AEEA;
+    background-color: #206040; }
+
+  .post {
+    border-top: solid 2px white;
+    background-color: black;
+    /* 水色のカラーペン的なのを引く */ }
+    .post strong {
+      background: linear-gradient(transparent 60%, #44dda7 60%);
+      text-shadow: 1px 1px 0 silver; }
+    .post blockquote {
+      background: #4F4F4F; }
+      .post blockquote cite {
+        color: #888888; }
+    .post .skit-balloon .chatting .says {
+      background: #303030; }
+
+  .post-meta .category a {
+    background: #1dcd00;
+    color: #FFFFFF; } }
+
 /*# sourceMappingURL=style.css.map */
