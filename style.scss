@@ -863,18 +863,18 @@ img {
 // ダークモード対応
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: #202020;
+		background-color: #101010;
 		color: white;
 	}
 
 	#header {
-		background-color: black;
+		background-color: #303030;
+		color: white;
 	}
-
 
 	.menu {	
 		& li {
-			background-color: black;
+			background-color: #303030;
 		}
 
 		& .current_page_item {
@@ -887,11 +887,11 @@ img {
 
 	.post {	
 		border-top: solid 2px white;
-		background-color: black;
+		background-color: #303030;
 
 		/* 水色のカラーペン的なのを引く */
 		& strong {
-			background: linear-gradient(transparent 60%, #44dda7 60%);
+			background: linear-gradient(transparent 60%, #44ad67 60%);
 			text-shadow: 1px 1px 0 $colorBoxShadowMain;
 		}
 
@@ -899,7 +899,7 @@ img {
 		& blockquote {
 			background: #4F4F4F;
 	
-			// 引用元
+			// 引用元S
 			& cite {
 				color: #888888;
 			}
@@ -921,6 +921,21 @@ img {
 				color: #FFFFFF;
 			}
 		}
+	}
+
+	#sidebar {
+		background-color: #303030;
+		color: white;
+	}
+
+	.type-page, .type-attachment {
+		border-top: solid 2px white;
+		background-color: black;
+	}
+	
+	.more-link {
+		color: #505050;
+		background: #EFFBFF;
 	}
 
 }

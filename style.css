@@ -669,14 +669,15 @@ img {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #202020;
+    background-color: #101010;
     color: white; }
 
   #header {
-    background-color: black; }
+    background-color: #303030;
+    color: white; }
 
   .menu li {
-    background-color: black; }
+    background-color: #303030; }
   .menu .current_page_item {
     border-left: solid 6px #00FF00;
     border-right: dotted 1px #44AEEA;
@@ -684,10 +685,10 @@ img {
 
   .post {
     border-top: solid 2px white;
-    background-color: black;
+    background-color: #303030;
     /* 水色のカラーペン的なのを引く */ }
     .post strong {
-      background: linear-gradient(transparent 60%, #44dda7 60%);
+      background: linear-gradient(transparent 60%, #44ad67 60%);
       text-shadow: 1px 1px 0 silver; }
     .post blockquote {
       background: #4F4F4F; }
@@ -698,6 +699,18 @@ img {
 
   .post-meta .category a {
     background: #1dcd00;
-    color: #FFFFFF; } }
+    color: #FFFFFF; }
+
+  #sidebar {
+    background-color: #303030;
+    color: white; }
+
+  .type-page, .type-attachment {
+    border-top: solid 2px white;
+    background-color: black; }
+
+  .more-link {
+    color: #505050;
+    background: #EFFBFF; } }
 
 /*# sourceMappingURL=style.css.map */
