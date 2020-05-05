@@ -868,7 +868,7 @@ img {
 	}
 
 	#header {
-		background-color: #303030;
+		background-color: #202020;
 		color: white;
 	}
 
@@ -881,16 +881,16 @@ img {
 	}
 
 	.menu {	
-		color:white;
-
 		& li {
-			background-color: #303030;
+			background-color: #505050;
+			color: white;
 		}
 
 		& .current_page_item {
 			border-left: solid 6px #00FF00;
 			border-right: dotted 1px #44AEEA;
-			background-color: #206040;
+			background-color: #60A060;
+			color: white;
 		}
 	}
 
@@ -986,22 +986,6 @@ img {
 	div.status-publish {
 		& h2 {
 			@include DefNonTextDecorationLink(white);
-		}
-	}
-
-	.navigation {
-		@include DefNonTextDecorationLink(white) {
-			display: block;
-			text-align: center;
-	
-			border: 2px solid $colorBoxShadowMain;
-	
-			padding-top: 0.5rem;
-			padding-bottom: 0.5rem;
-			padding-left: 0.5rem;
-			padding-right: 0.5rem;
-	
-			color: white;
 		}
 	}
 

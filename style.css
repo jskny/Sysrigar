@@ -673,7 +673,7 @@ img {
     color: white; }
 
   #header {
-    background-color: #303030;
+    background-color: #202020;
     color: white; }
 
   #logo a {
@@ -690,14 +690,14 @@ img {
   h1 {
     color: white; }
 
-  .menu {
+  .menu li {
+    background-color: #505050;
     color: white; }
-    .menu li {
-      background-color: #303030; }
-    .menu .current_page_item {
-      border-left: solid 6px #00FF00;
-      border-right: dotted 1px #44AEEA;
-      background-color: #206040; }
+  .menu .current_page_item {
+    border-left: solid 6px #00FF00;
+    border-right: dotted 1px #44AEEA;
+    background-color: #60A060;
+    color: white; }
 
   .post {
     border-top: solid 2px white;
@@ -765,25 +765,6 @@ img {
     div.status-publish h2 a:hover {
       color: white; }
     div.status-publish h2 a:active {
-      color: white; }
-
-  .navigation a {
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    border: 2px solid silver;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    color: white; }
-    .navigation a:link {
-      color: white; }
-    .navigation a:visited {
-      color: white; }
-    .navigation a:hover {
-      color: white; }
-    .navigation a:active {
       color: white; }
 
   .comments-list .comment a {
