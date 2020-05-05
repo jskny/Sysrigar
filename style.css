@@ -795,6 +795,9 @@ img {
     .comments-list .comment a:hover {
       color: white; }
     .comments-list .comment a:active {
-      color: white; } }
+      color: white; }
+
+  .wp-block-table td {
+    color: #888888; } }
 
 /*# sourceMappingURL=style.css.map */
