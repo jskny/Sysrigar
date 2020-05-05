@@ -867,6 +867,13 @@ img {
 		color: white;
 	}
 
+	a {
+		&:link { color:#6060FF; }
+		&:visited { color:#6060FF; }
+		&:hover { color:#00AAFF; }
+		&:active { color:#393C37; }
+	}
+
 	#header {
 		background-color: #202020;
 		color: white;
@@ -881,6 +888,8 @@ img {
 	}
 
 	.menu {	
+		color: white;
+
 		& li {
 			background-color: #505050;
 			color: white;
@@ -944,8 +953,8 @@ img {
 	}
 	
 	.more-link {
-		color: #505050;
-		background: #EFFBFF;
+		color: white;
+		background: #606060;
 	}
 
 	// コードとかコマンドとかの表示用

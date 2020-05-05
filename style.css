@@ -672,6 +672,15 @@ img {
     background-color: #101010;
     color: white; }
 
+  a:link {
+    color: #6060FF; }
+  a:visited {
+    color: #6060FF; }
+  a:hover {
+    color: #00AAFF; }
+  a:active {
+    color: #393C37; }
+
   #header {
     background-color: #202020;
     color: white; }
@@ -690,14 +699,16 @@ img {
   h1 {
     color: white; }
 
-  .menu li {
-    background-color: #505050;
+  .menu {
     color: white; }
-  .menu .current_page_item {
-    border-left: solid 6px #00FF00;
-    border-right: dotted 1px #44AEEA;
-    background-color: #60A060;
-    color: white; }
+    .menu li {
+      background-color: #505050;
+      color: white; }
+    .menu .current_page_item {
+      border-left: solid 6px #00FF00;
+      border-right: dotted 1px #44AEEA;
+      background-color: #60A060;
+      color: white; }
 
   .post {
     border-top: solid 2px white;
@@ -726,8 +737,8 @@ img {
     background-color: black; }
 
   .more-link {
-    color: #505050;
-    background: #EFFBFF; }
+    color: white;
+    background: #606060; }
 
   pre {
     background-color: #4F4F4F; }
