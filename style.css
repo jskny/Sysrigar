@@ -773,7 +773,8 @@ img {
       background-color: #505050; }
 
   .comment-respond {
-    background: white; }
+    background-color: #303030;
+    color: white; }
 
   div.status-publish h2 a {
     text-decoration: none; }
