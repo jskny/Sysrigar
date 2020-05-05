@@ -676,12 +676,14 @@ img {
     background-color: #303030;
     color: white; }
 
-  .menu li {
-    background-color: #303030; }
-  .menu .current_page_item {
-    border-left: solid 6px #00FF00;
-    border-right: dotted 1px #44AEEA;
-    background-color: #206040; }
+  .menu {
+    color: white; }
+    .menu li {
+      background-color: #303030; }
+    .menu .current_page_item {
+      border-left: solid 6px #00FF00;
+      border-right: dotted 1px #44AEEA;
+      background-color: #206040; }
 
   .post {
     border-top: solid 2px white;
@@ -711,6 +713,33 @@ img {
 
   .more-link {
     color: #505050;
-    background: #EFFBFF; } }
+    background: #EFFBFF; }
+
+  pre {
+    background-color: #4F4F4F; }
+
+  #breadcrumb a {
+    text-decoration: none; }
+    #breadcrumb a:link {
+      color: #6060FF; }
+    #breadcrumb a:visited {
+      color: #6060FF; }
+    #breadcrumb a:hover {
+      color: #00AAFF; }
+    #breadcrumb a:active {
+      color: #393C37; }
+
+  .widget_search {
+    background-color: #303030; }
+    .widget_search #search-form {
+      background-color: #505050; }
+
+  .widget {
+    background-color: #303030; }
+    .widget ul > li {
+      background-color: #505050; }
+
+  .comment-respond {
+    background: white; } }
 
 /*# sourceMappingURL=style.css.map */
