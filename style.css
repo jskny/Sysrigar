@@ -430,6 +430,17 @@ button:hover {
   }
 }
 
+/* PC表示時のサイドバー追従 (Sticky Sidebar) */
+@media (min-width: 769px) {
+  #sidebar {
+    position: sticky;
+    top: 2rem;
+    /* 上部からの距離 */
+    align-self: start;
+    /* グリッドアイテムの上端に揃える */
+  }
+}
+
 /* ブロックエディタ配置設定 */
 .alignwide {
   max-width: 100%;
