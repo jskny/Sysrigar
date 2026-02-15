@@ -35,7 +35,8 @@
   /* 枠線色 */
 
   /* レイアウト設定 */
-  --width-container: 1200px;
+  --width-container: 1280px;
+  /* コンテンツ最大幅を拡大 */
   /* コンテンツ最大幅 */
   --spacing-unit: 1rem;
   /* 基本余白 */
@@ -157,9 +158,11 @@ img {
   margin: 0 auto;
   padding: 0 var(--spacing-unit);
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 280px;
+  /* サイドバーを少し狭く */
   /* メイン + サイドバー */
-  gap: 2rem;
+  gap: 1.5rem;
+  /* ギャップを調整 */
   grid-template-areas:
     "header header"
     "main sidebar"
@@ -252,7 +255,8 @@ img {
 .type-page {
   background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
-  padding: 2rem;
+  padding: 1.5rem;
+  /* パディングを少し縮小してコンテンツ領域を確保 */
   margin-bottom: 2rem;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
