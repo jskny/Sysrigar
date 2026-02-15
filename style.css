@@ -424,7 +424,8 @@ button:hover {
   }
 
   .menu li {
-    width: 100%;
+    display: inline-block;
+    width: auto;
     text-align: center;
   }
 }
