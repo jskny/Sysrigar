@@ -523,3 +523,25 @@ button:hover {
   text-align: right;
   /* テキスト右寄せ */
 }
+
+/* 「続きを読む」リンク */
+.more-link {
+  display: block;
+  padding: 1rem;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-weight: bold;
+  color: var(--color-text-main);
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+.more-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  border-color: var(--color-primary);
+  text-decoration: none;
+}
