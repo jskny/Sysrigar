@@ -9,7 +9,7 @@ if (have_posts()): ?>
 				<header class="entry-header">
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				</header>
-				
+
 				<div class="entry-content">
 					<?php the_content(); ?>
 					<?php
@@ -22,10 +22,11 @@ if (have_posts()): ?>
 		wp_link_pages($args);
 ?>
 				</div>
-				
+
 				<footer class="entry-footer">
 					<?php if (function_exists('sysrigar_breadcrumb'))
 			sysrigar_breadcrumb(); ?>
+					<?php endif; ?>
 				</footer>
 			</article>
 		<?php
@@ -37,6 +38,7 @@ else: ?>
 				<p>申し訳ありませんが、お探しのページは見つかりませんでした。</p>
 				<?php if (function_exists('sysrigar_breadcrumb'))
 		sysrigar_breadcrumb(); ?>
+				<?php endif; ?>
 			</article>
 	<?php
 endif; ?>

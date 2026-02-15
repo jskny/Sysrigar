@@ -4,7 +4,7 @@
 		<?php dynamic_sidebar('sidebar-1'); ?>
 	<?php
 else: ?>
-		
+
 		<section class="widget widget_categories">
 			<h2 class="widget-title">カテゴリー</h2>
 			<ul>

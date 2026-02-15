@@ -15,7 +15,7 @@
 	<header id="header">
 		<h1 id="logo"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
 		<p id="description"><?php bloginfo('description'); ?></p>
-		
+
 		<nav id="site-navigation" class="main-navigation" aria-label="メインメニュー">
 			<?php
 wp_nav_menu(array(
