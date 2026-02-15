@@ -81,9 +81,6 @@ function sysrigar_scripts()
 	wp_enqueue_style('highlight-js', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css', array(), '9.12.0');
 	wp_enqueue_script('highlight-js', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js', array(), '9.12.0', true);
 	wp_add_inline_script('highlight-js', 'hljs.initHighlightingOnLoad();');
-
-	// 雪エフェクト用スクリプト
-	wp_enqueue_script('sysrigar-snow', get_template_directory_uri() . '/js/snow.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'sysrigar_scripts');
 
