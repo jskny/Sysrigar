@@ -288,14 +288,14 @@ img {
 }
 
 /* 記事内のリンクスタイル */
-.entry-content a {
+.post a {
   color: #00897b;
   /* アクセントカラーより少し濃い色で視認性確保 */
   text-decoration: underline;
   font-weight: 500;
 }
 
-.entry-content a:hover {
+.post a:hover {
   color: var(--color-accent);
   text-decoration: none;
 }
