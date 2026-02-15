@@ -44,7 +44,9 @@ $doubleEncodeUrl = str_replace("%", "%25", $doubleEncodeUrl);
 				<p class="footer-post-meta">
 					<?php the_tags( 'Tag : ', ', ' ); ?>
 					<span class="post-author">作成者 : <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
-<?php breadcrumb(); ?>
+<?php if (function_exists('sysrigar_breadcrumb')):
+sysrigar_breadcrumb(); ?>
+<?php endif; ?>
 				</p>
 			</div>
 			<div class="navigation"><!-- ページャー -->
@@ -63,7 +65,9 @@ $doubleEncodeUrl = str_replace("%", "%25", $doubleEncodeUrl);
 		<div class="post">
 			<h2>記事はありません</h2>
 			<p>お探しの記事は見つかりませんでした。</p>
-<?php breadcrumb(); ?>
+<?php if (function_exists('sysrigar_breadcrumb')):
+sysrigar_breadcrumb(); ?>
+<?php endif; ?>
 		</div>
 	<?php endif; ?>
 </div><!-- /main -->

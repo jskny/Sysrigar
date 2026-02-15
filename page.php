@@ -24,9 +24,9 @@ if (have_posts()): ?>
 				</div>
 
 				<footer class="entry-footer">
-					<?php if (function_exists('sysrigar_breadcrumb'))
+					<?php if (function_exists('sysrigar_breadcrumb')):
 			sysrigar_breadcrumb(); ?>
-					<?php endif; ?>
+				<?php endif; ?>
 				</footer>
 			</article>
 		<?php
@@ -36,7 +36,7 @@ else: ?>
 			<article class="post page">
 				<h2>ページが見つかりません</h2>
 				<p>申し訳ありませんが、お探しのページは見つかりませんでした。</p>
-				<?php if (function_exists('sysrigar_breadcrumb'))
+				<?php if (function_exists('sysrigar_breadcrumb')):
 		sysrigar_breadcrumb(); ?>
 				<?php endif; ?>
 			</article>
