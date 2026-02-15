@@ -203,11 +203,9 @@ add_action('login_init', 'admin_login_init');
 function admin_login_init()
 {
 	// 定数が定義されているか確認
-	if (defined('SYSRIGAR_LOGIN_KEY') && defined('SYSRIGAR_LOGIN_KEY_TEXT')) {
-		if (password_verify(SYSRIGAR_LOGIN_KEY_TEXT, SYSRIGAR_LOGIN_KEY) === false) {
-			header('Location:' . site_url() . '/404.php');
-			exit;
-		}
+	if(!defined('SYSRIGAR_LOGIN_KEY') || password_verify(SYSRIGAR_LOGIN_KEY_TEXT, SYSRIGAR_LOGIN_KEY) === false) {
+		header('Location:' . site_url() . '/404.php');
+		exit;
 	}
 }
 
