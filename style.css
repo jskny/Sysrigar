@@ -419,12 +419,12 @@ button:hover {
   }
 
   .menu ul {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
   .menu li {
-    width: 24%;
+    width: 100%;
     text-align: center;
   }
 }
