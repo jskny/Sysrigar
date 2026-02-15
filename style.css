@@ -287,6 +287,19 @@ img {
   font-size: 0.75rem;
 }
 
+/* 記事内のリンクスタイル */
+.entry-content a {
+  color: #00897b;
+  /* アクセントカラーより少し濃い色で視認性確保 */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.entry-content a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
 /* コメントエリア */
 #comment-area {
   background-color: var(--color-bg-surface);
