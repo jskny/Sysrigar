@@ -477,3 +477,49 @@ button:hover {
 .sns-buttons .line {
   background-color: #00c300;
 }
+
+/* ページネーション（次へ・前へ） */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.navigation .prev,
+.navigation .next {
+  width: 48%;
+  /* 左右に少し隙間を空ける */
+}
+
+/* リンクをボタンのように見せる */
+.navigation a {
+  display: block;
+  padding: 1rem;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-weight: bold;
+  color: var(--color-text-main);
+}
+
+.navigation a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  border-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.navigation .prev {
+  margin-right: auto;
+  /* 左寄せ */
+}
+
+.navigation .next {
+  margin-left: auto;
+  /* 右寄せ */
+  text-align: right;
+  /* テキスト右寄せ */
+}
