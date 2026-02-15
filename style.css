@@ -355,6 +355,29 @@ img {
   border-bottom: 1px dashed var(--color-border);
 }
 
+/* Compact Sidebar Widgets (Recent Posts & Comments) */
+.widget_recent_entries,
+.widget_recent_comments {
+  padding: 1rem;
+}
+
+.widget_recent_entries .widget-title,
+.widget_recent_comments .widget-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+.widget_recent_entries ul li,
+.widget_recent_comments ul li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.widget_recent_comments .recentcomments a {
+  display: inline-block;
+}
+
 /* フォーム */
 input[type="text"],
 input[type="email"],
