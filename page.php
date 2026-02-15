@@ -1,24 +1,47 @@
 <?php get_header(); ?>
 <!-- page.php -->
-<div id="main">
+<main id="main">
 <?php
-	if ( have_posts() ) : // WordPress ループ
-		while ( have_posts() ) : the_post(); // 繰り返し処理開始 ?>
-			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<?php the_content(); ?>
-<?php breadcrumb(); ?>
-			</div>
-		<?php endwhile; // 繰り返し処理終了
-	else : // ここから記事が見つからなかった場合の処理 ?>
-			<div class="post page">
-				<h2>ページがありません</h2>
-				<p>お探しのページは見つかりませんでした。</p>
-<?php breadcrumb(); ?>
-			</div>
-	<?php endif; ?>
-</div>
+if (have_posts()): ?>
+		<?php while (have_posts()):
+		the_post(); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header">
+					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				</header>
+				
+				<div class="entry-content">
+					<?php the_content(); ?>
+					<?php
+		$args = array(
+			'before' => '<div class="page-link">',
+			'after' => '</div>',
+			'link_before' => '<span>',
+			'link_after' => '</span>',
+		);
+		wp_link_pages($args);
+?>
+				</div>
+				
+				<footer class="entry-footer">
+					<?php if (function_exists('sysrigar_breadcrumb'))
+			sysrigar_breadcrumb(); ?>
+				</footer>
+			</article>
+		<?php
+	endwhile; ?>
+	<?php
+else: ?>
+			<article class="post page">
+				<h2>ページが見つかりません</h2>
+				<p>申し訳ありませんが、お探しのページは見つかりませんでした。</p>
+				<?php if (function_exists('sysrigar_breadcrumb'))
+		sysrigar_breadcrumb(); ?>
+			</article>
+	<?php
+endif; ?>
+</main>
 <!-- /main -->
 <!-- /page.php -->
-<?php get_sidebar();
-get_footer(); ?>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

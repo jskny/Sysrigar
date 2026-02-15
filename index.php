@@ -18,14 +18,14 @@
 				<h2>記事はありません</h2>
 				<p>お探しの記事は見つかりませんでした。</p>
 			</div>
-	<?php endif;
+	<?php endif; ?>
 
-	if ( $wp_query->max_num_pages > 1 ) : // ここからページャー ?>
-		<div class="navigation clearfix">
-			<div class="prev"><?php next_posts_link(' &laquo; Previous '); ?></div>
-			<div class="next"><?php previous_posts_link(' NEXT &raquo; '); ?></div>
-		</div>
-	<?php endif; // ページャーここまで ?>
+	<?php if ( $wp_query->max_num_pages > 1 ) : // ここからページャー ?>
+		<nav class="navigation clearfix" aria-label="投稿ページナビゲーション">
+			<div class="prev"><?php next_posts_link(' &laquo; 前へ '); ?></div>
+			<div class="next"><?php previous_posts_link(' 次へ &raquo; '); ?></div>
+		</nav>
+	<?php endif; ?>// ページャーここまで ?>
 </div><!-- /main -->
 <!-- / index.php -->
 <?php get_sidebar();

@@ -1,58 +1,192 @@
 <?php
-// メインカラムの幅を指定する変数。
+/**
+ * Sysrigar 関数と定義
+ */
+
+// コンテンツ幅の設定
 if (!isset($content_width)) {
-	$content_width = 980;
+	$content_width = 1200;
+}
+
+/**
+ * テーマのセットアップとWordPress機能のサポート登録
+ */
+function sysrigar_setup()
+{
+	// RSSフィードリンクを<head>に出力
+	add_theme_support('automatic-feed-links');
+
+	// タイトルタグをWordPressに管理させる
+	add_theme_support('title-tag');
+
+	// アイキャッチ画像（サムネイル）の有効化
+	add_theme_support('post-thumbnails');
+
+	// HTML5マークアップのサポート
+	add_theme_support('html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+		'style',
+		'script',
+	));
+
+	// ブロックスタイルのサポート
+	add_theme_support('wp-block-styles');
+
+	// 全幅・幅広配置の画像のサポート
+	add_theme_support('align-wide');
+
+	// レスポンシブ埋め込みのサポート
+	add_theme_support('responsive-embeds');
+
+	// エディタスタイル（管理画面の見た目）のサポート
+	add_theme_support('editor-styles');
+
+	// ナビゲーションメニューの登録
+	register_nav_menus(array(
+		'primary' => 'ヘッダーナビゲーション',
+	));
+}
+add_action('after_setup_theme', 'sysrigar_setup');
+
+/**
+ * ウィジェットエリア（サイドバー）の登録
+ */
+function sysrigar_widgets_init()
+{
+	register_sidebar(array(
+		'name' => 'サイドバー',
+		'id' => 'sidebar-1',
+		'description' => 'ここにウィジェットを追加してください。',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+}
+add_action('widgets_init', 'sysrigar_widgets_init');
+
+/**
+ * スタイルとスクリプトの読み込み
+ */
+function sysrigar_scripts()
+{
+	// スタイルシートの読み込み
+	wp_enqueue_style('sysrigar-style', get_stylesheet_uri(), array(), '2.0.0');
+
+	// Highlight.js（コードハイライト用）
+	wp_enqueue_style('highlight-js', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css', array(), '9.12.0');
+	wp_enqueue_script('highlight-js', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js', array(), '9.12.0', true);
+	wp_add_inline_script('highlight-js', 'hljs.initHighlightingOnLoad();');
+}
+add_action('wp_enqueue_scripts', 'sysrigar_scripts');
+
+
+/**
+ * Schema.org 対応パンくずリスト
+ */
+function sysrigar_breadcrumb()
+{
+	if (is_home() || is_front_page() || is_admin()) {
+		return;
+	}
+
+	echo '<nav aria-label="Breadcrumb" class="breadcrumb">';
+	echo '<ol itemscope itemtype="https://schema.org/BreadcrumbList">';
+
+	// ホーム
+	echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+	echo '<a itemprop="item" href="' . home_url() . '"><span itemprop="name">ホーム</span></a>';
+	echo '<meta itemprop="position" content="1" />';
+	echo '</li>';
+
+	$position = 2;
+
+	if (is_category() || is_single()) {
+		$cats = get_the_category();
+		if (!empty($cats)) {
+			// 最初のカテゴリーを取得
+			$cat = $cats[0];
+			// 親カテゴリーがあれば取得してループ
+			if ($cat->parent != 0) {
+				$ancestors = array_reverse(get_ancestors($cat->cat_ID, 'category'));
+				foreach ($ancestors as $ancestor) {
+					echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+					echo '<a itemprop="item" href="' . get_category_link($ancestor) . '"><span itemprop="name">' . get_cat_name($ancestor) . '</span></a>';
+					echo '<meta itemprop="position" content="' . $position++ . '" />';
+					echo '</li>';
+				}
+			}
+
+			if (is_category()) {
+				echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+				echo '<span itemprop="name" aria-current="page">' . $cat->cat_name . '</span>';
+				echo '<meta itemprop="position" content="' . $position++ . '" />';
+				echo '</li>';
+			}
+			else {
+				// 投稿ページの場合、カテゴリーへのリンクを表示
+				echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+				echo '<a itemprop="item" href="' . get_category_link($cat->term_id) . '"><span itemprop="name">' . $cat->cat_name . '</span></a>';
+				echo '<meta itemprop="position" content="' . $position++ . '" />';
+				echo '</li>';
+			}
+		}
+	}
+	elseif (is_page()) {
+		global $post;
+		if ($post->post_parent) {
+			$ancestors = array_reverse(get_post_ancestors($post->ID));
+			foreach ($ancestors as $ancestor) {
+				echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+				echo '<a itemprop="item" href="' . get_permalink($ancestor) . '"><span itemprop="name">' . get_the_title($ancestor) . '</span></a>';
+				echo '<meta itemprop="position" content="' . $position++ . '" />';
+				echo '</li>';
+			}
+		}
+	}
+
+	if (is_single() || is_page()) {
+		echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+		echo '<span itemprop="name" aria-current="page">' . get_the_title() . '</span>';
+		echo '<meta itemprop="position" content="' . $position . '" />';
+		echo '</li>';
+	}
+	elseif (is_search()) {
+		echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+		echo '<span itemprop="name" aria-current="page">検索結果: ' . get_search_query() . '</span>';
+		echo '<meta itemprop="position" content="' . $position . '" />';
+		echo '</li>';
+	}
+
+	echo '</ol>';
+	echo '</nav>';
 }
 
 
-// <head>内に RSSフィードのリンクを表示するコード
-add_theme_support('automatic-feed-links');
+// --- 従来の機能とセキュリティ対策（維持） ---
 
-// ダイナミックサイドバーを定義するコード
-register_sidebar(array(
-	'name'		=> 'サイドバーウィジット-1',
-	'id'		=> 'sidebar-1',
-	'description'	=> 'サイドバーのウィジットエリアです。デフォルトのサイドバーと丸ごと入れ替えたいときに使ってください。',
-
-	'before_title'	=> '<p class="title">',
-	'after_title'	=> '</p>',
-	'before_widget'	=> '<div id="%1$s" class="widget %2$s">',
-	'after_widget'	=> '</div>',
-));
-
-
-// カスタムメニュー機能を有効にするコード
-add_theme_support('menus');
-// メニューの「ホーム」という表記を Home に変更
-function sysrigar_page_menu_args($args) {
+// メニューの「ホーム」という表記を Home に変更するフィルター
+function sysrigar_page_menu_args($args)
+{
 	$args['show_home'] = 'Home';
 	return $args;
 }
 add_filter('wp_page_menu_args', 'sysrigar_page_menu_args');
 
-// カスタムメニューの「場所」を設定するコード
-register_nav_menu('primary', 'ヘッダーのナビゲーション');
-
-
-// 不必要な meta 情報を排除
-// generatorを非表示にする
+// head内の不要なタグを削除（セキュリティと軽量化のため）
 remove_action('wp_head', 'wp_generator');
-// EditURIを非表示にする
 remove_action('wp_head', 'rsd_link');
-// wlwmanifestを非表示にする
 remove_action('wp_head', 'wlwmanifest_link');
-// http://wpcj.net/1977
-foreach (array('rss2_head', 'commentsrss2_head', 'rss_head', 'rdf_header', 'atom_head', 'comments_atom_head', 'opml_head', 'app_head') as $action) {
-	remove_action( $action, 'the_generator' );
-}
-// http://on-ze.com/archives/5127
-remove_action('wp_head','rest_output_link_wp_head');
-remove_action('wp_head','wp_oembed_add_discovery_links');
-remove_action('wp_head','wp_oembed_add_host_js');
+remove_action('wp_head', 'rest_output_link_wp_head');
+remove_action('wp_head', 'wp_oembed_add_discovery_links');
 
-
-// 絵文字スクリプトを削除
-function disable_emoji() {
+// 絵文字スクリプトの無効化（軽量化）
+function disable_emoji()
+{
 	remove_action('wp_head', 'print_emoji_detection_script', 7);
 	remove_action('admin_print_scripts', 'print_emoji_detection_script');
 	remove_action('wp_print_styles', 'print_emoji_styles');
@@ -63,98 +197,41 @@ function disable_emoji() {
 }
 add_action('init', 'disable_emoji');
 
-
-// dnsプリフェッチのコードを除去
-add_filter('wp_resource_hints', 'remove_dns_prefetch', 10, 2);
-function remove_dns_prefetch($hints, $relation_type) {
-	if ('dns-prefetch' === $relation_type) {
-		return array_diff( wp_dependencies_unique_hosts(), $hints );
-	}
-	return $hints;
-}
-
-
-// パンくずリスト
-// http://wind-mill.co.jp/iwashiblog/2014/08/pankuzu-breadcrumb/
-function breadcrumb() {
-	global $post;
-	$str ='';
-	if(!is_home()&&!is_admin()){
-		$str.= '<div id="breadcrumb"><div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;">';
-		$str.= '<a href="'. home_url() .'" itemprop="url"><span itemprop="title">Home</span></a> &gt;&#160;</div>';
-		if(is_category()) {
-			$cat = get_queried_object();
-			if($cat -> parent != 0){
-				$ancestors = array_reverse(get_ancestors( $cat -> cat_ID, 'category' ));
-				foreach($ancestors as $ancestor){
-$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($ancestor) .'" itemprop="url"><span itemprop="title">'. get_cat_name($ancestor) .'</span></a> &gt;&#160;</div>';
-				}
-			}
-$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($cat -> term_id). '" itemprop="url"><span itemprop="title">'. $cat-> cat_name . '</span></a> &gt;&#160;</div>';
-		} elseif(is_page()){
-			if($post -> post_parent != 0 ){
-				$ancestors = array_reverse(get_post_ancestors( $post->ID ));
-				foreach($ancestors as $ancestor){
-					$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_permalink($ancestor).'" itemprop="url"><span itemprop="title">'. get_the_title($ancestor) .'</span></a> &gt;&#160;</div>';
-				}
-			}
-		} elseif(is_single()){
-			$categories = get_the_category($post->ID);
-			$cat = $categories[0];
-			if($cat -> parent != 0){
-				$ancestors = array_reverse(get_ancestors( $cat -> cat_ID, 'category' ));
-				foreach($ancestors as $ancestor){
-					$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($ancestor).'" itemprop="url"><span itemprop="title">'. get_cat_name($ancestor). '</span></a>→</div>';
-				}
-			}
-			$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($cat -> term_id). '" itemprop="url"><span itemprop="title">'. $cat-> cat_name . '</span></a> &gt;&#160;</div>';
-		} else{
-			$str.='<div>'. wp_title('', false) .'</div>';
-		}
-		$str.='</div>';
-	}
-	echo $str;
-}
-
-
-// ウクライナ等からのログインページへの攻撃が続いているので、先人様を参考にしてセキュリティ対策を施す。
-// wordpress フォルダ直下に admin-page-access.php を置き、そこ経由でのみアクセスを認める。
-// 2017/12/24
-// https://gray-code.com/blog/wordpress/change-the-url-of-admin-page/
+// 管理画面へのアクセス制限
 define('LOGIN_PAGE', 'admin-page-access.php');
 add_action('login_init', 'admin_login_init');
 function admin_login_init()
 {
-	if(!defined('SYSRIGAR_LOGIN_KEY') || password_verify(SYSRIGAR_LOGIN_KEY_TEXT, SYSRIGAR_LOGIN_KEY) === false) {
-		header('Location:' . site_url() . '/404.php');
-		exit;
+	// 定数が定義されているか確認
+	if (defined('SYSRIGAR_LOGIN_KEY') && defined('SYSRIGAR_LOGIN_KEY_TEXT')) {
+		if (password_verify(SYSRIGAR_LOGIN_KEY_TEXT, SYSRIGAR_LOGIN_KEY) === false) {
+			header('Location:' . site_url() . '/404.php');
+			exit;
+		}
 	}
 }
 
 add_filter('site_url', 'admin_login_site_url', 10, 4);
 function admin_login_site_url($url, $path, $orig_scheme, $blog_id)
 {
-	if(($path == 'wp-login.php' || preg_match('/wp-login\.php\?action=\w+/', $path) ) && (is_user_logged_in() || strpos($_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false)) {
+	if (($path == 'wp-login.php' || preg_match('/wp-login\.php\?action=\w+/', $path)) && (is_user_logged_in() || strpos($_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false)) {
 		$url = str_replace('wp-login.php', LOGIN_PAGE, $url);
 	}
 	return $url;
 }
 add_filter('wp_redirect', 'admin_login_wp_redirect', 10, 2);
-function admin_login_wp_redirect( $location, $status) {
-	if(is_user_logged_in() && strpos($_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false) {
+function admin_login_wp_redirect($location, $status)
+{
+	if (is_user_logged_in() && strpos($_SERVER['REQUEST_URI'], LOGIN_PAGE) !== false) {
 		$location = str_replace('wp-login.php', LOGIN_PAGE, $location);
 	}
 	return $location;
 }
 
-
-// 「続きを読む」リンクのクリック時にページをスクロールしない
-// https://wpdocs.osdn.jp/%E3%80%8C%E7%B6%9A%E3%81%8D%E3%82%92%E8%AA%AD%E3%82%80%E3%80%8D%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA
-function remove_more_link_scroll( $link ) {
-	$link = preg_replace( '|#more-[0-9]+|', '', $link );
+// 「続きを読む」リンクのスクロール削除
+function remove_more_link_scroll($link)
+{
+	$link = preg_replace('|#more-[0-9]+|', '', $link);
 	return $link;
 }
-add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
-
-
-?>
+add_filter('the_content_more_link', 'remove_more_link_scroll');
