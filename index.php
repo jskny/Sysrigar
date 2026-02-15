@@ -25,7 +25,7 @@
 			<div class="prev"><?php next_posts_link(' &laquo; 前へ '); ?></div>
 			<div class="next"><?php previous_posts_link(' 次へ &raquo; '); ?></div>
 		</nav>
-	<?php endif; ?>// ページャーここまで ?>
+	<?php endif; // ページャーここまで ?>
 </div><!-- /main -->
 <!-- / index.php -->
 <?php get_sidebar();
